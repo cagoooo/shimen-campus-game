@@ -1,29 +1,49 @@
 {
-  "version": "0.26.2",
+  "version": "0.26.3",
   "files": {
-    "index.html": {
-      "sha256": "ba9f73871d2d79e4a5dc444cb5c7ef92333fc491d3b7df723933592ef17e8d10",
-      "bytes": 5991
+    "index.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
     },
-    "index.wasm": {
-      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
-      "bytes": 39514754
+    "audio/bell-preview.mp3": {
+      "bytes": 32660,
+      "sha256": "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
+    },
+    "index.html": {
+      "bytes": 6031,
+      "sha256": "93b145bb74e92df5e392221c469b2d74fe5925483fc32f3860911ac9d32bbd7e"
+    },
+    "audio/birds.mp3": {
+      "bytes": 256796,
+      "sha256": "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
     },
     "index.pck": {
-      "sha256": "e49da7e4b0b4529a9f1bce7ffb6c1e949d439b3ccab7653003758c08471c7e79",
-      "bytes": 30149508
+      "bytes": 30150700,
+      "sha256": "4bb9de2487cc8254af6d4d73423cf773fb91aad5aa5714acb6cacf8d16e9c136"
     },
-    "index.audio.worklet.js": {
-      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-      "bytes": 7298
+    "audio/school-song.mp3": {
+      "bytes": 4077334,
+      "sha256": "1e31636f9c84eed7e45a49e1f8392477b49c0837bc81ebec4193b293c79ed0ef"
     },
     "index.audio.position.worklet.js": {
-      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
-      "bytes": 2973
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     },
-    "index.js": {
-      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
-      "bytes": 279815
+    "index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "audio/wind.mp3": {
+      "bytes": 785852,
+      "sha256": "8de1b74c8d9851070776ca03c40060e469ab562fb97dd7c49715602510d1b994"
+    },
+    "campus-audio.js": {
+      "bytes": 2820,
+      "sha256": "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
     }
   }
 }
