@@ -1,0 +1,29 @@
+{
+  "version": "0.26.1",
+  "files": {
+    "index.html": {
+      "sha256": "b50fad3f6e45b458be67c59752dc39bfc5de4d1cbd5574fe2c77941ffa4c53a2",
+      "bytes": 5991
+    },
+    "index.audio.position.worklet.js": {
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+      "bytes": 2973
+    },
+    "index.wasm": {
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+      "bytes": 39514754
+    },
+    "index.js": {
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+      "bytes": 279815
+    },
+    "index.pck": {
+      "sha256": "f14c7dd0f1185a015a413e7fcb8242375b4ebb64ab97175b911aeb8f0e9b3f28",
+      "bytes": 29306580
+    },
+    "index.audio.worklet.js": {
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+      "bytes": 7298
+    }
+  }
+}

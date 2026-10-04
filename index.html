@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#193e35">
+<meta name="description" content="走進石門國小的 3D 校園，探索景點、體驗遊具與校園挑戰。支援電腦及手機橫直式操作。">
+<title>石門・校園漫遊｜阿凱老師</title>
+<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#193e35;color:#fff8e8;font-family:system-ui,"Microsoft JhengHei",sans-serif}body{overflow:hidden}#canvas{display:block;position:absolute;left:env(safe-area-inset-left,0px);top:env(safe-area-inset-top,0px);width:calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));height:calc(100% - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));outline:0;touch-action:none}#landing{position:fixed;inset:0;overflow:auto;padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom));display:grid;place-items:center;background:radial-gradient(ellipse at 15% 0%,#426d50,transparent 70%),#193e35}.card{width:min(100%,620px)}.eyebrow{letter-spacing:.18em;font-size:13px;color:#c5d8b9}h1{font-size:clamp(36px,8vw,62px);letter-spacing:.06em;margin:22px 0}p{line-height:1.8;color:#e2e7d5}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}button{font:inherit;cursor:pointer;border:1px solid #ffffff50;border-radius:14px;padding:15px 24px;background:#fff5d6;color:#173e32;font-weight:700;min-height:52px}button:disabled{opacity:.65;cursor:wait}button.secondary{background:transparent;color:inherit}.tips{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tips section{border-top:1px solid #ffffff40;padding-top:12px}.tips h2{font-size:16px}small,footer{font-size:12px;color:#c9d9c1}footer{margin-top:28px}a{color:#fff1b0;text-underline-offset:4px}progress{width:100%;height:10px;accent-color:#ffcf64}#status{min-height:28px;font-size:14px}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}@media(max-width:440px){h1{font-size:38px}.tips{grid-template-columns:1fr}h1{margin:16px 0}.actions{margin:18px 0}}
+</style>
+</head>
+<body>
+<canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
+<main id="landing"><div class="card">
+<div class="eyebrow">桃園市龍潭區石門國民小學</div>
+<h1>石門・校園漫遊</h1>
+<p>走進熟悉的走廊，看看校園裡的小角落。<br>探索景點、玩遊具，收集你的校園挑戰。</p>
+<div class="actions"><button id="start">開始校園探索</button><button class="secondary" id="fullscreen">全螢幕</button></div>
+<progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p>
+<div class="tips"><section><h2>電腦遊玩</h2><p>WASD 移動・滑鼠環視<br>空白鍵跳躍・Q 操作遊具<br>E 看景點・Esc 暫停</p></section><section><h2>手機遊玩</h2><p>左下搖桿移動・右側滑動環視<br>右下按鈕跳躍與互動<br>直式、橫式都可以玩</p></section></div>
+<small>校園探索原型 0.26.1・場景依照片重建，比例仍在持續校正。<br>挑戰進度保存在目前瀏覽器；清除網站資料後會重設。</small>
+<footer>Made with ❤️ by <a href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a></footer>
+</div></main>
+<div id="help" class="hidden"><button id="restart">重新載入</button></div>
+<script src="index.js"></script>
+<script>
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":29306580,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const engine=new Engine(config);
+const start=document.getElementById('start'),status=document.getElementById('status'),progress=document.getElementById('progress');
+document.getElementById('fullscreen').onclick=()=>{if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{status.textContent='此瀏覽器無法切換全螢幕，可直接開始遊戲。'});else status.textContent='此裝置可直接在瀏覽器內遊玩，橫直式皆可。'};
+document.getElementById('restart').onclick=()=>location.reload();
+start.onclick=async()=>{
+ const missing=Engine.getMissingFeatures({threads:false});
+ if(missing.length){status.textContent='此瀏覽器缺少 '+missing.join('、')+'，請使用支援 WebGL 2 的新版瀏覽器。';return;}
+ start.disabled=true;progress.classList.remove('hidden');status.textContent='正在下載校園…';
+ try{
+  const touch=matchMedia('(pointer: coarse)').matches||navigator.maxTouchPoints>0;
+  await engine.startGame({args:touch?['--','--touch-ui']:[],onProgress:(current,total)=>{if(total){progress.max=total;progress.value=current;status.textContent='正在準備校園 '+Math.round(current/total*100)+'%';}},onExit:()=>location.reload()});
+  document.getElementById('landing').classList.add('hidden');document.getElementById('canvas').focus();
+ }catch(error){console.error(error);status.textContent='遊戲載入失敗，請重新整理後再試。'+String(error.message||error);document.getElementById('help').classList.remove('hidden');}
+};
+document.getElementById('canvas').addEventListener('contextmenu',event=>event.preventDefault());
+</script>
+</body></html>
+
+
