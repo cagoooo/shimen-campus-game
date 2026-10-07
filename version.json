@@ -1,6 +1,6 @@
 ﻿{
-    "version":  "0.26.6",
-    "download_bytes":  28624743,
+    "version":  "0.27.0",
+    "download_bytes":  28625968,
     "files":  {
                   "index.apple-touch-icon.png":  {
                                                      "bytes":  11944,
@@ -39,8 +39,8 @@
                                     "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
                                 },
                   "index.pck":  {
-                                    "bytes":  13917720,
-                                    "sha256":  "ec2933f5108558184ff9634473da713e9b11080481e3ace696cdefd9bb040bf8"
+                                    "bytes":  13918680,
+                                    "sha256":  "8f5a8dc7446d3973d7ddf883285b993fd9c6eaadec9fd8d2be18e9dc808ab26b"
                                 },
                   "index.audio.position.worklet.js":  {
                                                           "bytes":  2973,
@@ -83,8 +83,8 @@
                                               "sha256":  "a5dee137f56016f9fcdf7ea7f2603faabc221e0fb283d1655563091b92892995"
                                           },
                   "index.html":  {
-                                     "bytes":  7682,
-                                     "sha256":  "97d0369a9aa788f7954ebad978f38c2e978cd8d98dfce58fc2251c1f1b2d0cd8"
+                                     "bytes":  11356,
+                                     "sha256":  "f6e99d276a239d671bbd92b884d461d4d4ec1c89ff5d5438d4993f728f773bf7"
                                  }
               }
 }

@@ -2,15 +2,20 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
+<script>
+// LINE opens links in its own WebView; its official openExternalBrowser=1 flag hands the page to Safari/Chrome,
+// where WebGL, audio and saved progress behave normally. Query and hash are kept, and the flag prevents loops.
+(function(){var ua=navigator.userAgent||'';if(/\bLine\//i.test(ua)&&location.search.indexOf('openExternalBrowser=1')===-1){var sep=location.search?'&':'?';location.replace(location.href.split('#')[0]+sep+'openExternalBrowser=1'+location.hash);}})();
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#193e35">
 <meta name="description" content="走進石門國小的 3D 校園，探索景點、體驗遊具與校園挑戰。支援電腦及手機橫直式操作。">
 <title>石門・校園漫遊｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.26.6" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.26.6" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.26.6" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.26.6" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.27.0" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.27.0" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.27.0" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.27.0" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・校園漫遊">
@@ -30,7 +35,7 @@
 <meta name="twitter:image:alt" content="石門校園漫遊遊戲宣傳插畫。">
 
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#193e35;color:#fff8e8;font-family:system-ui,"Microsoft JhengHei",sans-serif}body{overflow:hidden}#canvas{display:block;position:absolute;left:env(safe-area-inset-left,0px);top:env(safe-area-inset-top,0px);width:calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));height:calc(100% - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));outline:0;touch-action:none}#landing{position:fixed;inset:0;overflow:auto;padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom));display:grid;place-items:center;background:radial-gradient(ellipse at 15% 0%,#426d50,transparent 70%),#193e35}.card{width:min(100%,620px)}.eyebrow{letter-spacing:.18em;font-size:13px;color:#c5d8b9}h1{font-size:clamp(36px,8vw,62px);letter-spacing:.06em;margin:22px 0}p{line-height:1.8;color:#e2e7d5}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}button{font:inherit;cursor:pointer;border:1px solid #ffffff50;border-radius:14px;padding:15px 24px;background:#fff5d6;color:#173e32;font-weight:700;min-height:52px}button:disabled{opacity:.65;cursor:wait}button.secondary{background:transparent;color:inherit}.tips{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tips section{border-top:1px solid #ffffff40;padding-top:12px}.tips h2{font-size:16px}small,footer{font-size:12px;color:#c9d9c1}footer{margin-top:28px}a{color:#fff1b0;text-underline-offset:4px}progress{width:100%;height:10px;accent-color:#ffcf64}#status{min-height:28px;font-size:14px}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}@media(max-width:440px){h1{font-size:38px}.tips{grid-template-columns:1fr}h1{margin:16px 0}.actions{margin:18px 0}}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#193e35;color:#fff8e8;font-family:system-ui,"Microsoft JhengHei",sans-serif}body{overflow:hidden}#canvas{display:block;position:absolute;left:env(safe-area-inset-left,0px);top:env(safe-area-inset-top,0px);width:calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));height:calc(100% - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));outline:0;touch-action:none}#landing{position:fixed;inset:0;overflow:auto;padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom));display:grid;place-items:center;background:radial-gradient(ellipse at 15% 0%,#426d50,transparent 70%),#193e35}.card{width:min(100%,620px)}.eyebrow{letter-spacing:.18em;font-size:13px;color:#c5d8b9}h1{font-size:clamp(36px,8vw,62px);letter-spacing:.06em;margin:22px 0}p{line-height:1.8;color:#e2e7d5}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}button{font:inherit;cursor:pointer;border:1px solid #ffffff50;border-radius:14px;padding:15px 24px;background:#fff5d6;color:#173e32;font-weight:700;min-height:52px}button:disabled{opacity:.65;cursor:wait}button.secondary{background:transparent;color:inherit}.tips{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tips section{border-top:1px solid #ffffff40;padding-top:12px}.tips h2{font-size:16px}small,footer{font-size:12px;color:#c9d9c1}footer{margin-top:28px}a{color:#fff1b0;text-underline-offset:4px}progress{width:100%;height:10px;accent-color:#ffcf64}#status{min-height:28px;font-size:14px}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}.inapp{display:grid;gap:8px;margin:18px 0;padding:14px 16px;border:1px solid #ffcf6488;border-radius:14px;background:#ffcf6418;font-size:14px;line-height:1.7}.inapp b{color:#ffe7a3}.inapp-actions{display:flex;flex-wrap:wrap;gap:10px}.inapp button{min-height:42px;padding:8px 16px}@media(max-width:440px){h1{font-size:38px}.tips{grid-template-columns:1fr}h1{margin:16px 0}.actions{margin:18px 0}}
 </style>
 </head>
 <body>
@@ -39,30 +44,64 @@
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
 <h1>石門・校園漫遊</h1>
 <p>走進熟悉的走廊，看看校園裡的小角落。<br>探索景點、玩遊具，收集你的校園挑戰。</p>
+<div id="inapp" class="inapp hidden" role="note"><b>建議改用瀏覽器開啟</b><span>你正在 App 內建瀏覽器裡開啟。3D 校園用 Safari 或 Chrome 會更順，挑戰紀錄也比較不會遺失。請點右上角「⋯」選「用瀏覽器開啟」。</span><div class="inapp-actions"><button id="chrome" class="hidden">用 Chrome 開啟</button><button class="secondary" id="copy">複製連結</button></div></div>
 <div class="actions"><button id="start">開始校園探索</button><button class="secondary" id="fullscreen">全螢幕</button></div>
 <progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p>
 <div class="tips"><section><h2>電腦遊玩</h2><p>WASD 移動・滑鼠環視<br>空白鍵跳躍・Q 操作遊具<br>E 看景點・Esc 暫停</p></section><section><h2>手機遊玩</h2><p>左下搖桿移動・右側滑動環視<br>右下按鈕跳躍與互動<br>直式、橫式都可以玩</p></section></div>
-<small>校園探索原型 0.26.6・場景依照片重建，比例仍在持續校正。<br>挑戰進度保存在目前瀏覽器；清除網站資料後會重設。</small>
+<small>校園探索原型 0.27.0・場景依照片重建，比例仍在持續校正。<br>挑戰進度保存在目前瀏覽器；清除網站資料後會重設。</small>
 <footer>Made with ❤️ by <a href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a></footer>
 </div></main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
 <script src="index.js"></script>
 <script src="campus-audio.js"></script>
 <script>
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":13917720,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":13918680,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const engine=new Engine(config);
-const start=document.getElementById('start'),status=document.getElementById('status'),progress=document.getElementById('progress');
-document.getElementById('fullscreen').onclick=()=>{if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{status.textContent='此瀏覽器無法切換全螢幕，可直接開始遊戲。'});else status.textContent='此裝置可直接在瀏覽器內遊玩，橫直式皆可。'};
+const start=document.getElementById('start'),status=document.getElementById('status'),progress=document.getElementById('progress'),landing=document.getElementById('landing');
+const say=text=>{status.textContent=text};
+let downloadMB=0,started=false,ready=false;
+document.getElementById('fullscreen').onclick=()=>{if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{say('此瀏覽器無法切換全螢幕，可直接開始遊戲。')});else say('此裝置可直接在瀏覽器內遊玩，橫直式皆可。')};
 document.getElementById('restart').onclick=()=>location.reload();
+// Size hint: version.json stores the estimated transfer (compressed engine + game data + music).
+fetch('version.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(info=>{
+ if(!info||!info.download_bytes)return;
+ downloadMB=Math.max(1,Math.round(info.download_bytes/1e6));
+ if(!start.disabled)say('第一次開啟約需下載 '+downloadMB+' MB，建議使用 Wi-Fi；之後再開通常快很多。');
+}).catch(()=>{});
+// Check WebGL 2 before anyone waits for a download.
+const missing=Engine.getMissingFeatures({threads:false});
+if(missing.length){console.warn('Missing features:',missing);start.disabled=true;say('這個瀏覽器無法顯示 3D 校園（不支援 WebGL 2）。請改用新版 Chrome、Edge 或 Safari 開啟。');}
+// Other in-app browsers have no escape flag: offer copy, and Chrome on Android. LINE is redirected in <head>.
+const ua=navigator.userAgent||'';
+if(/FBAN|FBAV|FB_IAB|Instagram|Messenger|MicroMessenger|KAKAOTALK|\bLine\//i.test(ua)){
+ document.getElementById('inapp').classList.remove('hidden');
+ const page=location.origin+location.pathname;
+ if(/Android/i.test(ua)){const chrome=document.getElementById('chrome');chrome.classList.remove('hidden');chrome.onclick=()=>{location.href='intent://'+location.host+location.pathname+'#Intent;scheme=https;package=com.android.chrome;end'}}
+ document.getElementById('copy').onclick=()=>{(navigator.clipboard?navigator.clipboard.writeText(page):Promise.reject()).then(()=>say('已複製連結，貼到 Safari 或 Chrome 就能開啟。')).catch(()=>window.prompt('請複製這個連結：',page))};
+}
+const reveal=()=>{if(landing.classList.contains('hidden'))return;landing.classList.add('hidden');document.getElementById('canvas').focus()};
+window.campusReady=()=>{ready=true;if(started)reveal()};
+const wait=s=>s<10?'不到 10 秒':s<60?'約剩 '+Math.max(10,Math.round(s/5)*5)+' 秒':'約剩 '+Math.round(s/60)+' 分鐘';
 start.onclick=async()=>{
- const missing=Engine.getMissingFeatures({threads:false});
- if(missing.length){status.textContent='此瀏覽器缺少 '+missing.join('、')+'，請使用支援 WebGL 2 的新版瀏覽器。';return;}
- start.disabled=true;progress.classList.remove('hidden');status.textContent='正在下載校園…';
+ if(missing.length)return;
+ start.disabled=true;progress.classList.remove('hidden');progress.max=1;progress.value=0;say('正在下載校園…');
+ const t0=performance.now();let changed=t0,last=-1,slow=false;
+ const stall=setInterval(()=>{if(!started&&!slow&&performance.now()-changed>20000){slow=true;say(status.textContent+'｜網路有點慢，可以稍候或改用 Wi-Fi')}},5000);
  try{
   const touch=matchMedia('(pointer: coarse)').matches||navigator.maxTouchPoints>0;
-  await engine.startGame({args:touch?['--','--touch-ui']:[],onProgress:(current,total)=>{if(total){progress.max=total;progress.value=current;status.textContent='正在準備校園 '+Math.round(current/total*100)+'%';}},onExit:()=>location.reload()});
-  document.getElementById('landing').classList.add('hidden');document.getElementById('canvas').focus();
- }catch(error){console.error(error);status.textContent='遊戲載入失敗，請重新整理後再試。'+String(error.message||error);document.getElementById('help').classList.remove('hidden');}
+  await engine.startGame({args:touch?['--','--touch-ui']:[],onProgress:(current,total)=>{
+   if(!total)return;
+   const now=performance.now(),f=Math.min(1,current/total);
+   if(current!==last){last=current;changed=now;slow=false}
+   progress.value=f;
+   if(f>=1){say('下載完成，正在建立校園…');return}
+   const elapsed=(now-t0)/1000,eta=f>.03&&elapsed>2?elapsed*(1-f)/f:0;
+   say('正在下載校園 '+Math.round(f*100)+'%'+(downloadMB?'・約 '+Math.round(f*downloadMB)+'／'+downloadMB+' MB':'')+(eta?'・'+wait(eta):''));
+  },onExit:()=>location.reload()});
+  started=true;clearInterval(stall);progress.value=1;
+  say('下載完成，正在建立校園…');
+  if(ready)reveal();else setTimeout(reveal,25000);
+ }catch(error){clearInterval(stall);console.error(error);say('遊戲載入失敗，請重新整理後再試。'+String(error.message||error));document.getElementById('help').classList.remove('hidden');}
 };
 document.getElementById('canvas').addEventListener('contextmenu',event=>event.preventDefault());
 </script>
