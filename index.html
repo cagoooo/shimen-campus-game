@@ -7,10 +7,10 @@
 <meta name="description" content="走進石門國小的 3D 校園，探索景點、體驗遊具與校園挑戰。支援電腦及手機橫直式操作。">
 <title>石門・校園漫遊｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.26.5" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.26.5" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.26.5" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.26.5" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.26.6" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.26.6" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.26.6" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.26.6" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・校園漫遊">
@@ -42,14 +42,14 @@
 <div class="actions"><button id="start">開始校園探索</button><button class="secondary" id="fullscreen">全螢幕</button></div>
 <progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p>
 <div class="tips"><section><h2>電腦遊玩</h2><p>WASD 移動・滑鼠環視<br>空白鍵跳躍・Q 操作遊具<br>E 看景點・Esc 暫停</p></section><section><h2>手機遊玩</h2><p>左下搖桿移動・右側滑動環視<br>右下按鈕跳躍與互動<br>直式、橫式都可以玩</p></section></div>
-<small>校園探索原型 0.26.5・場景依照片重建，比例仍在持續校正。<br>挑戰進度保存在目前瀏覽器；清除網站資料後會重設。</small>
+<small>校園探索原型 0.26.6・場景依照片重建，比例仍在持續校正。<br>挑戰進度保存在目前瀏覽器；清除網站資料後會重設。</small>
 <footer>Made with ❤️ by <a href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a></footer>
 </div></main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
 <script src="index.js"></script>
 <script src="campus-audio.js"></script>
 <script>
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":30151132,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":13917720,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const engine=new Engine(config);
 const start=document.getElementById('start'),status=document.getElementById('status'),progress=document.getElementById('progress');
 document.getElementById('fullscreen').onclick=()=>{if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{status.textContent='此瀏覽器無法切換全螢幕，可直接開始遊戲。'});else status.textContent='此裝置可直接在瀏覽器內遊玩，橫直式皆可。'};

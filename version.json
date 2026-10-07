@@ -1,89 +1,90 @@
-{
-  "version": "0.26.5",
-  "files": {
-    "index.html": {
-      "bytes": 7683,
-      "sha256": "27a9efa63394a3615784092aebad3ffcfe59da36f6a6314cedb86077532f0778"
-    },
-    "index.icon.png": {
-      "bytes": 5700,
-      "sha256": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
-    },
-    "index.audio.worklet.js": {
-      "bytes": 7298,
-      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
-    },
-    "icon-192.png": {
-      "bytes": 11438,
-      "sha256": "d5b0974a952828a670f4a3977961a8a89667165e184acc4deaac8472d2e5e1ba"
-    },
-    "audio/wind.mp3": {
-      "bytes": 785852,
-      "sha256": "8de1b74c8d9851070776ca03c40060e469ab562fb97dd7c49715602510d1b994"
-    },
-    "index.apple-touch-icon.png": {
-      "bytes": 11944,
-      "sha256": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
-    },
-    "index.png": {
-      "bytes": 21443,
-      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
-    },
-    "index.wasm": {
-      "bytes": 39514754,
-      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
-    },
-    "icon-512.png": {
-      "bytes": 7101,
-      "sha256": "a61c4dfdc26cea4a975977342a7bbb03342d921f9fc2c92be4e143b6cc2140ce"
-    },
-    "campus-audio.js": {
-      "bytes": 2820,
-      "sha256": "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
-    },
-    "audio/school-song.mp3": {
-      "bytes": 4077334,
-      "sha256": "1e31636f9c84eed7e45a49e1f8392477b49c0837bc81ebec4193b293c79ed0ef"
-    },
-    "og-campus-v0264.png": {
-      "bytes": 1260458,
-      "sha256": "a5dee137f56016f9fcdf7ea7f2603faabc221e0fb283d1655563091b92892995"
-    },
-    "favicon-32.png": {
-      "bytes": 1951,
-      "sha256": "2310c1524bfc00a609c9fe33228ccfaf0a74dcdd94e58334d216ed297cbdc25e"
-    },
-    "index.js": {
-      "bytes": 279815,
-      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
-    },
-    "index.pck": {
-      "bytes": 30151132,
-      "sha256": "2e024595efbc359e29f7ea4f76d0767e5fd2a89820902b5519e48a8b9276a8a4"
-    },
-    "apple-touch-icon.png": {
-      "bytes": 10854,
-      "sha256": "c1b3a356b1c3feca9882d828682c7ab7748d984bcbfc593c0cb5d66508a82357"
-    },
-    "favicon.svg": {
-      "bytes": 594,
-      "sha256": "55a94bf73cd86a09553a71e3dd304b2889271788b6e48ad352ac9c71d5bc2224"
-    },
-    "index.audio.position.worklet.js": {
-      "bytes": 2973,
-      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
-    },
-    "favicon.ico": {
-      "bytes": 9538,
-      "sha256": "153c162b661d87f13cc51770b86ca45c20cd1632d5876a7bc9c37e031adb693c"
-    },
-    "audio/birds.mp3": {
-      "bytes": 256796,
-      "sha256": "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
-    },
-    "audio/bell-preview.mp3": {
-      "bytes": 32660,
-      "sha256": "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
-    }
-  }
+﻿{
+    "version":  "0.26.6",
+    "download_bytes":  28624743,
+    "files":  {
+                  "index.apple-touch-icon.png":  {
+                                                     "bytes":  11944,
+                                                     "sha256":  "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+                                                 },
+                  "audio/school-song.mp3":  {
+                                                "bytes":  4077334,
+                                                "sha256":  "1e31636f9c84eed7e45a49e1f8392477b49c0837bc81ebec4193b293c79ed0ef"
+                                            },
+                  "favicon.svg":  {
+                                      "bytes":  594,
+                                      "sha256":  "55a94bf73cd86a09553a71e3dd304b2889271788b6e48ad352ac9c71d5bc2224"
+                                  },
+                  "audio/wind.mp3":  {
+                                         "bytes":  785852,
+                                         "sha256":  "8de1b74c8d9851070776ca03c40060e469ab562fb97dd7c49715602510d1b994"
+                                     },
+                  "audio/birds.mp3":  {
+                                          "bytes":  256796,
+                                          "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
+                                      },
+                  "index.audio.worklet.js":  {
+                                                 "bytes":  7298,
+                                                 "sha256":  "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+                                             },
+                  "apple-touch-icon.png":  {
+                                               "bytes":  10854,
+                                               "sha256":  "c1b3a356b1c3feca9882d828682c7ab7748d984bcbfc593c0cb5d66508a82357"
+                                           },
+                  "index.wasm":  {
+                                     "bytes":  39514754,
+                                     "sha256":  "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+                                 },
+                  "index.png":  {
+                                    "bytes":  21443,
+                                    "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+                                },
+                  "index.pck":  {
+                                    "bytes":  13917720,
+                                    "sha256":  "ec2933f5108558184ff9634473da713e9b11080481e3ace696cdefd9bb040bf8"
+                                },
+                  "index.audio.position.worklet.js":  {
+                                                          "bytes":  2973,
+                                                          "sha256":  "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+                                                      },
+                  "icon-512.png":  {
+                                       "bytes":  7101,
+                                       "sha256":  "a61c4dfdc26cea4a975977342a7bbb03342d921f9fc2c92be4e143b6cc2140ce"
+                                   },
+                  "index.icon.png":  {
+                                         "bytes":  5700,
+                                         "sha256":  "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
+                                     },
+                  "icon-192.png":  {
+                                       "bytes":  11438,
+                                       "sha256":  "d5b0974a952828a670f4a3977961a8a89667165e184acc4deaac8472d2e5e1ba"
+                                   },
+                  "audio/bell-preview.mp3":  {
+                                                 "bytes":  32660,
+                                                 "sha256":  "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
+                                             },
+                  "favicon-32.png":  {
+                                         "bytes":  1951,
+                                         "sha256":  "2310c1524bfc00a609c9fe33228ccfaf0a74dcdd94e58334d216ed297cbdc25e"
+                                     },
+                  "index.js":  {
+                                   "bytes":  279815,
+                                   "sha256":  "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+                               },
+                  "favicon.ico":  {
+                                      "bytes":  9538,
+                                      "sha256":  "153c162b661d87f13cc51770b86ca45c20cd1632d5876a7bc9c37e031adb693c"
+                                  },
+                  "campus-audio.js":  {
+                                          "bytes":  2820,
+                                          "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
+                                      },
+                  "og-campus-v0264.png":  {
+                                              "bytes":  1260458,
+                                              "sha256":  "a5dee137f56016f9fcdf7ea7f2603faabc221e0fb283d1655563091b92892995"
+                                          },
+                  "index.html":  {
+                                     "bytes":  7682,
+                                     "sha256":  "97d0369a9aa788f7954ebad978f38c2e978cd8d98dfce58fc2251c1f1b2d0cd8"
+                                 }
+              }
 }
