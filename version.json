@@ -1,7 +1,7 @@
 ﻿{
-    "version":  "0.31.0",
-    "download_bytes":  31753424,
-    "preload_bytes":  26633442,
+    "version":  "0.31.1",
+    "download_bytes":  31717492,
+    "preload_bytes":  26597510,
     "files":  {
                   "index.apple-touch-icon.png":  {
                                                      "bytes":  11944,
@@ -44,8 +44,8 @@
                                     "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
                                 },
                   "index.pck":  {
-                                    "bytes":  19258008,
-                                    "sha256":  "9419d8690e9785664206d0abe46a6fecb68f289515bb5baada5f42002df699a6"
+                                    "bytes":  19260360,
+                                    "sha256":  "14b4bb4576f75ace534098e2368ff6ee8d5c9cc627af19140428d0e109aa7288"
                                 },
                   "index.audio.position.worklet.js":  {
                                                           "bytes":  2973,
@@ -64,8 +64,8 @@
                                        "sha256":  "d5b0974a952828a670f4a3977961a8a89667165e184acc4deaac8472d2e5e1ba"
                                    },
                   "og-campus-v0310.png":  {
-                                              "bytes":  350369,
-                                              "sha256":  "530674dac83611eeafe75377a6d1556957317284cdbe9830062a52bb22728305"
+                                              "bytes":  349905,
+                                              "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
                                           },
                   "favicon-32.png":  {
                                          "bytes":  1951,
@@ -89,7 +89,7 @@
                                           },
                   "index.html":  {
                                      "bytes":  13110,
-                                     "sha256":  "88488c95a7164d1b82480fe6c065f435f401662a61816240b3208dc1f0baffa9"
+                                     "sha256":  "23f59fe9c85a4e5bb3871909ba4609c1efb832458b9472e978b3fc28b10e5563"
                                  }
               }
 }
