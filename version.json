@@ -1,7 +1,7 @@
 ﻿{
-    "version":  "0.30.1",
-    "download_bytes":  22218830,
-    "preload_bytes":  17098848,
+    "version":  "0.31.0",
+    "download_bytes":  31753435,
+    "preload_bytes":  26633453,
     "files":  {
                   "index.apple-touch-icon.png":  {
                                                      "bytes":  11944,
@@ -19,6 +19,10 @@
                                          "bytes":  785852,
                                          "sha256":  "8de1b74c8d9851070776ca03c40060e469ab562fb97dd7c49715602510d1b994"
                                      },
+                  "audio/bell-preview.mp3":  {
+                                                 "bytes":  32660,
+                                                 "sha256":  "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
+                                             },
                   "audio/birds.mp3":  {
                                           "bytes":  256796,
                                           "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
@@ -40,8 +44,8 @@
                                     "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
                                 },
                   "index.pck":  {
-                                    "bytes":  7501240,
-                                    "sha256":  "d5a7134718a877aa07951c8e136211ec3fb363c8815791fa4efaac22416780ff"
+                                    "bytes":  19257992,
+                                    "sha256":  "67977402c8ac7daa2213acf47e41fe8193e94e5302a99123f668e55d2938af32"
                                 },
                   "index.audio.position.worklet.js":  {
                                                           "bytes":  2973,
@@ -59,10 +63,10 @@
                                        "bytes":  11438,
                                        "sha256":  "d5b0974a952828a670f4a3977961a8a89667165e184acc4deaac8472d2e5e1ba"
                                    },
-                  "audio/bell-preview.mp3":  {
-                                                 "bytes":  32660,
-                                                 "sha256":  "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
-                                             },
+                  "og-campus-v0310.png":  {
+                                              "bytes":  350369,
+                                              "sha256":  "530674dac83611eeafe75377a6d1556957317284cdbe9830062a52bb22728305"
+                                          },
                   "favicon-32.png":  {
                                          "bytes":  1951,
                                          "sha256":  "2310c1524bfc00a609c9fe33228ccfaf0a74dcdd94e58334d216ed297cbdc25e"
@@ -84,8 +88,8 @@
                                               "sha256":  "a5dee137f56016f9fcdf7ea7f2603faabc221e0fb283d1655563091b92892995"
                                           },
                   "index.html":  {
-                                     "bytes":  12968,
-                                     "sha256":  "4ff0290d3e7ba1c237f348bbcfa61c8d1707c2dd8ec2dc682eeff3f24f526b7d"
+                                     "bytes":  13110,
+                                     "sha256":  "37c0b64c4b3a2deebe815814569f8c3465828fe3f000d230d1ba7d68d4bc8239"
                                  }
               }
 }
