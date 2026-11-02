@@ -1,95 +1,163 @@
 ﻿{
-    "version":  "0.31.5",
-    "download_bytes":  31739382,
-    "preload_bytes":  26619400,
+    "version":  "0.31.6",
+    "download_bytes":  31745254,
+    "preload_bytes":  26625272,
     "files":  {
-                  "index.apple-touch-icon.png":  {
-                                                     "bytes":  11944,
-                                                     "sha256":  "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
-                                                 },
-                  "audio/school-song.mp3":  {
-                                                "bytes":  4077334,
-                                                "sha256":  "1e31636f9c84eed7e45a49e1f8392477b49c0837bc81ebec4193b293c79ed0ef"
-                                            },
-                  "favicon.svg":  {
-                                      "bytes":  594,
-                                      "sha256":  "55a94bf73cd86a09553a71e3dd304b2889271788b6e48ad352ac9c71d5bc2224"
-                                  },
-                  "audio/wind.mp3":  {
-                                         "bytes":  785852,
-                                         "sha256":  "8de1b74c8d9851070776ca03c40060e469ab562fb97dd7c49715602510d1b994"
-                                     },
-                  "audio/bell-preview.mp3":  {
-                                                 "bytes":  32660,
-                                                 "sha256":  "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
-                                             },
-                  "audio/birds.mp3":  {
-                                          "bytes":  256796,
-                                          "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
-                                      },
-                  "index.audio.worklet.js":  {
-                                                 "bytes":  7298,
-                                                 "sha256":  "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
-                                             },
-                  "apple-touch-icon.png":  {
-                                               "bytes":  10854,
-                                               "sha256":  "c1b3a356b1c3feca9882d828682c7ab7748d984bcbfc593c0cb5d66508a82357"
-                                           },
-                  "index.wasm":  {
-                                     "bytes":  39514754,
-                                     "sha256":  "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+                  "photos/gate.webp":  {
+                                           "bytes":  187366,
+                                           "sha256":  "e861c22539ffa803322dfc85aab1e2b286c47e10580ee5bc5ec009645b71b9c1"
+                                       },
+                  "index.html":  {
+                                     "bytes":  17093,
+                                     "sha256":  "02e8788710b96a1d1add97750b1f3c57ae51880d772bde3f07b5c84d1465c296"
                                  },
-                  "index.png":  {
-                                    "bytes":  21443,
-                                    "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
-                                },
-                  "index.pck":  {
-                                    "bytes":  19279876,
-                                    "sha256":  "76b5286ce77f9c673349ca541983a20021c0f8922ac6371a262f5e5a6d92f134"
-                                },
+                  "photos/aquaponics.webp":  {
+                                                 "bytes":  153790,
+                                                 "sha256":  "d7fcd4f8f3ba63f9aa567e69025489e58493eaaed0264f635f96220e5456789d"
+                                             },
+                  "favicon-32.png":  {
+                                         "bytes":  1951,
+                                         "sha256":  "2310c1524bfc00a609c9fe33228ccfaf0a74dcdd94e58334d216ed297cbdc25e"
+                                     },
                   "index.audio.position.worklet.js":  {
                                                           "bytes":  2973,
                                                           "sha256":  "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
                                                       },
+                  "photos/roundabout.webp":  {
+                                                 "bytes":  217920,
+                                                 "sha256":  "0a0552dcd5b4e99d240a9d70ffc0b9a103e8dd11ade5c684e212d62a8a43d9c4"
+                                             },
+                  "index.png":  {
+                                    "bytes":  21443,
+                                    "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+                                },
+                  "photos/main.webp":  {
+                                           "bytes":  215518,
+                                           "sha256":  "22e58542f117487fd1bef36521ab1e61dd2250059adfdc75f74d024165393596"
+                                       },
+                  "audio/school-song.mp3":  {
+                                                "bytes":  4077334,
+                                                "sha256":  "1e31636f9c84eed7e45a49e1f8392477b49c0837bc81ebec4193b293c79ed0ef"
+                                            },
+                  "index.wasm":  {
+                                     "bytes":  39514754,
+                                     "sha256":  "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+                                 },
+                  "photos/courtyard_play.webp":  {
+                                                     "bytes":  196962,
+                                                     "sha256":  "4c54583aa1a5237f9f2c974423c0b6b09f337263be0a92a1ca46e73c9e0491f4"
+                                                 },
+                  "photos/mural_view.webp":  {
+                                                 "bytes":  120712,
+                                                 "sha256":  "a98005e36fcd24696fb414230e5d4f15b58c6f5194fa3c7bebaad20c98b9af4d"
+                                             },
+                  "photos/sky_side_a.webp":  {
+                                                 "bytes":  188258,
+                                                 "sha256":  "0be3b7897859444104d27b89d07d2619a78615344af6aa309d5edac0a38b2e5c"
+                                             },
                   "icon-512.png":  {
                                        "bytes":  7101,
                                        "sha256":  "a61c4dfdc26cea4a975977342a7bbb03342d921f9fc2c92be4e143b6cc2140ce"
+                                   },
+                  "index.audio.worklet.js":  {
+                                                 "bytes":  7298,
+                                                 "sha256":  "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+                                             },
+                  "favicon.ico":  {
+                                      "bytes":  9538,
+                                      "sha256":  "153c162b661d87f13cc51770b86ca45c20cd1632d5876a7bc9c37e031adb693c"
+                                  },
+                  "favicon.svg":  {
+                                      "bytes":  594,
+                                      "sha256":  "55a94bf73cd86a09553a71e3dd304b2889271788b6e48ad352ac9c71d5bc2224"
+                                  },
+                  "photos/grade1_play.webp":  {
+                                                  "bytes":  165154,
+                                                  "sha256":  "b762b7331c0e7fc2d9c95913f7194c50de70dfa67ff4915ce991988a421e4b3f"
+                                              },
+                  "countdown-v0315.mp4":  {
+                                              "bytes":  658238,
+                                              "sha256":  "f5693f1b66da05520bf1dbf2553a333e959553884cf2273a6f960e59554130b3"
+                                          },
+                  "og-campus-v0264.png":  {
+                                              "bytes":  1260458,
+                                              "sha256":  "a5dee137f56016f9fcdf7ea7f2603faabc221e0fb283d1655563091b92892995"
+                                          },
+                  "photos/spider_stage.webp":  {
+                                                   "bytes":  166078,
+                                                   "sha256":  "a91598c0dfb189dc6c8d6b34a86aa2e89088600aa12c06da793f00f22a3a7909"
+                                               },
+                  "index.apple-touch-icon.png":  {
+                                                     "bytes":  11944,
+                                                     "sha256":  "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+                                                 },
+                  "photos/sky_center.webp":  {
+                                                 "bytes":  165794,
+                                                 "sha256":  "51616350ba0da6704266a84955cf72e5be4fc7ab673857fcdd52f62c4a7540fb"
+                                             },
+                  "photos/track.webp":  {
+                                            "bytes":  94142,
+                                            "sha256":  "fd74fef2371963bbb319d05b44af24529606ddf6b304662fbb1cd8b535f6d43c"
+                                        },
+                  "og-campus-v0310.png":  {
+                                              "bytes":  349905,
+                                              "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
+                                          },
+                  "photos/sky_side_b.webp":  {
+                                                 "bytes":  185994,
+                                                 "sha256":  "ff28d20d819c098c2728b375fbecd10f83da939757028ed7305eb553cab4ce26"
+                                             },
+                  "photos/aquaponic_net.webp":  {
+                                                    "bytes":  242422,
+                                                    "sha256":  "62a8b1bcbc0e1b332416741fd835306a3fb98606705ec6bd4409de60330bb81c"
+                                                },
+                  "photos/fish.webp":  {
+                                           "bytes":  210758,
+                                           "sha256":  "8fbf67d27f7d5b4f6c4f52bf19277a526f6cbc9f67c6deaca408ffbccc05cf95"
+                                       },
+                  "campus-audio.js":  {
+                                          "bytes":  2820,
+                                          "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
+                                      },
+                  "index.pck":  {
+                                    "bytes":  19286752,
+                                    "sha256":  "f9aed38cbfdc1ed88e1df4387c3e8d290d0cd64ba9aefee5e84c36e944e00f35"
+                                },
+                  "apple-touch-icon.png":  {
+                                               "bytes":  10854,
+                                               "sha256":  "c1b3a356b1c3feca9882d828682c7ab7748d984bcbfc593c0cb5d66508a82357"
+                                           },
+                  "icon-192.png":  {
+                                       "bytes":  11438,
+                                       "sha256":  "d5b0974a952828a670f4a3977961a8a89667165e184acc4deaac8472d2e5e1ba"
                                    },
                   "index.icon.png":  {
                                          "bytes":  5700,
                                          "sha256":  "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
                                      },
-                  "icon-192.png":  {
-                                       "bytes":  11438,
-                                       "sha256":  "d5b0974a952828a670f4a3977961a8a89667165e184acc4deaac8472d2e5e1ba"
-                                   },
-                  "og-campus-v0310.png":  {
-                                              "bytes":  349905,
-                                              "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
-                                          },
-                  "favicon-32.png":  {
-                                         "bytes":  1951,
-                                         "sha256":  "2310c1524bfc00a609c9fe33228ccfaf0a74dcdd94e58334d216ed297cbdc25e"
+                  "audio/wind.mp3":  {
+                                         "bytes":  785852,
+                                         "sha256":  "8de1b74c8d9851070776ca03c40060e469ab562fb97dd7c49715602510d1b994"
                                      },
+                  "photos/grade1_reverse.webp":  {
+                                                     "bytes":  143704,
+                                                     "sha256":  "81cf57fb64c8718cc9ec42c576592f93b3d7a8af3ef0c22826d946517e2c43da"
+                                                 },
+                  "audio/birds.mp3":  {
+                                          "bytes":  256796,
+                                          "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
+                                      },
+                  "audio/bell-preview.mp3":  {
+                                                 "bytes":  32660,
+                                                 "sha256":  "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
+                                             },
                   "index.js":  {
                                    "bytes":  279815,
                                    "sha256":  "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
                                },
-                  "favicon.ico":  {
-                                      "bytes":  9538,
-                                      "sha256":  "153c162b661d87f13cc51770b86ca45c20cd1632d5876a7bc9c37e031adb693c"
-                                  },
-                  "campus-audio.js":  {
-                                          "bytes":  2820,
-                                          "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
-                                      },
-                  "og-campus-v0264.png":  {
-                                              "bytes":  1260458,
-                                              "sha256":  "a5dee137f56016f9fcdf7ea7f2603faabc221e0fb283d1655563091b92892995"
-                                          },
-                  "index.html":  {
-                                     "bytes":  17093,
-                                     "sha256":  "04eccb8bfa4ef8c4012b75336d1dcc9430bcf5a796cbacba7aaf46d07a7e0064"
-                                 }
+                  "photos/courtyard_arch.webp":  {
+                                                     "bytes":  107234,
+                                                     "sha256":  "a35b0d111c177bcba843d31c9e6b2f5d2023d55a7ea74dd113dc28054481cbcf"
+                                                 }
               }
 }
