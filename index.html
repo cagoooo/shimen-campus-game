@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.31.4" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.31.4" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.31.4" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.31.4" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.31.5" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.31.5" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.31.5" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.31.5" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -36,7 +36,7 @@
 
 <style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#193e35;color:#fff8e8;font-family:system-ui,"Microsoft JhengHei",sans-serif}body{overflow:hidden}#canvas{display:block;position:absolute;left:env(safe-area-inset-left,0px);top:env(safe-area-inset-top,0px);width:calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));height:calc(100% - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));outline:0;touch-action:none}#landing{position:fixed;inset:0;overflow:auto;padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom));display:grid;place-items:center;background:radial-gradient(ellipse at 15% 0%,#426d50,transparent 70%),#193e35}.card{width:min(100%,620px)}.eyebrow{letter-spacing:.18em;font-size:13px;color:#c5d8b9}h1{font-size:clamp(36px,8vw,62px);letter-spacing:.06em;margin:22px 0}p{line-height:1.8;color:#e2e7d5}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}button{font:inherit;cursor:pointer;border:1px solid #ffffff50;border-radius:14px;padding:15px 24px;background:#fff5d6;color:#173e32;font-weight:700;min-height:52px}button:disabled{opacity:.65;cursor:wait}button.secondary{background:transparent;color:inherit}.tips{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tips section{border-top:1px solid #ffffff40;padding-top:12px}.tips h2{font-size:16px}small,footer{font-size:12px;color:#c9d9c1}footer{margin-top:28px}a{color:#fff1b0;text-underline-offset:4px}progress{width:100%;height:10px;accent-color:#ffcf64}#status{min-height:28px;font-size:14px}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}.inapp{display:grid;gap:8px;margin:18px 0;padding:14px 16px;border:1px solid #ffcf6488;border-radius:14px;background:#ffcf6418;font-size:14px;line-height:1.7}.inapp b{color:#ffe7a3}.inapp-actions{display:flex;flex-wrap:wrap;gap:10px}.inapp button{min-height:42px;padding:8px 16px}@media(max-width:440px){h1{font-size:38px}.tips{grid-template-columns:1fr}h1{margin:16px 0}.actions{margin:18px 0}}
-#countdown{position:fixed;inset:0;z-index:2;--dial:min(60vmin,420px);display:grid;place-content:center;justify-items:center;gap:6px;padding:24px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2f6650,transparent 70%),#193e35}.cd-dial{position:relative;width:var(--dial);height:var(--dial);display:grid;place-items:center}.cd-ring{position:absolute;inset:0;border-radius:50%;border:calc(var(--dial)*.03) solid #ffffff1f;border-top-color:#ffcf64;will-change:transform;animation:cd-spin 1.2s linear infinite}.cd-window{height:1em;overflow:hidden;font-size:calc(var(--dial)*.5);line-height:1;font-weight:800;color:#ffcf64;font-variant-numeric:tabular-nums;will-change:transform,opacity;animation:cd-pop 1s ease-out var(--seconds)}.cd-strip{will-change:transform}.cd-strip span{display:block;height:1em}.cd-title{margin:10px 0 0;font-size:clamp(20px,5vmin,28px);font-weight:700;letter-spacing:.08em;color:#fff8e8}.cd-note{position:relative;margin:0;min-height:1.8em;font-size:clamp(14px,3.4vmin,17px)}.cd-note span{display:block;will-change:opacity;animation:cd-out .4s var(--wait) forwards}.cd-note .cd-late{position:absolute;inset:0;opacity:0;animation:cd-in .4s var(--wait) forwards}@keyframes cd-spin{to{transform:rotate(1turn)}}@keyframes cd-pop{from{transform:scale(1.2);opacity:.55}30%,to{transform:scale(1);opacity:1}}@keyframes cd-roll{to{transform:translate3d(0,calc(-100% + 1em),0)}}@keyframes cd-out{to{opacity:0}}@keyframes cd-in{to{opacity:1}}@media(prefers-reduced-motion:reduce){.cd-window{animation:none}.cd-ring{animation-duration:4s}}
+#countdown{position:fixed;inset:0;z-index:2;--dial:min(60vmin,420px);display:grid;place-content:center;justify-items:center;gap:6px;padding:24px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2f6650,transparent 70%),#193e35}.cd-dial{position:relative;width:var(--dial);height:var(--dial);display:grid;place-items:center}.cd-ring{position:absolute;inset:0;border-radius:50%;border:calc(var(--dial)*.03) solid #ffffff1f;border-top-color:#ffcf64;will-change:transform;animation:cd-spin 1.2s linear infinite}.cd-window{position:relative;width:1.4em;height:1em;font-size:calc(var(--dial)*.5);line-height:1;font-weight:800;color:#ffcf64;font-variant-numeric:tabular-nums}.cd-window span{position:absolute;inset:0;text-align:center;opacity:0;will-change:opacity,transform;animation:cd-tick 1s linear both}.cd-window .cd-last{animation-name:cd-hold}.cd-title{margin:10px 0 0;font-size:clamp(20px,5vmin,28px);font-weight:700;letter-spacing:.08em;color:#fff8e8}.cd-note{position:relative;margin:0;min-height:1.8em;font-size:clamp(14px,3.4vmin,17px)}.cd-note span{display:block;will-change:opacity;animation:cd-out .4s var(--wait) forwards}.cd-note .cd-late{position:absolute;inset:0;opacity:0;animation:cd-in .4s var(--wait) forwards}@keyframes cd-spin{to{transform:rotate(1turn)}}@keyframes cd-tick{0%{opacity:0;transform:scale(1.2)}6%{opacity:1}28%{transform:scale(1)}94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}@keyframes cd-hold{0%{opacity:0;transform:scale(1.2)}6%{opacity:1}28%,100%{opacity:1;transform:scale(1)}}@keyframes cd-out{to{opacity:0}}@keyframes cd-in{to{opacity:1}}.cd-dial video{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;opacity:0}.cd-dial.playing video{opacity:1}.cd-dial.playing .cd-ring,.cd-dial.playing .cd-window{visibility:hidden}@media(prefers-reduced-motion:reduce){.cd-ring{animation-duration:4s}}
 </style>
 </head>
 <body>
@@ -49,16 +49,16 @@
 <div class="actions"><button id="start">開始校園冒險</button><button class="secondary" id="fullscreen">全螢幕</button></div>
 <progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p>
 <div class="tips"><section><h2>電腦遊玩</h2><p>WASD 移動・滑鼠環視<br>空白鍵跳躍・Q 操作遊具<br>V 第一人稱・X 建造方塊<br>J 心晴任務・N 校園導航・Esc 暫停</p></section><section><h2>手機遊玩</h2><p>左半邊拖曳移動・右側滑動環視<br>上方「視角」切換第一人稱、「建造」蓋方塊<br>走到角色身邊就會自動對話</p></section></div>
-<small>校園探索原型 0.31.4・校園變成方塊世界，還能自己蓋方塊！<br>挑戰與任務進度保存在目前瀏覽器；清除網站資料後會重設。</small>
+<small>校園探索原型 0.31.5・校園變成方塊世界，還能自己蓋方塊！<br>挑戰與任務進度保存在目前瀏覽器；清除網站資料後會重設。</small>
 <footer>Made with ❤️ by <a href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a></footer>
 </div>
-<div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial"><i class="cd-ring"></i><div class="cd-window"><div class="cd-strip" id="cdStrip"></div></div></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
+<div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="auto"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
 <script src="index.js"></script>
 <script src="campus-audio.js"></script>
 <script>
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":19272772,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":19279876,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const exe=config.executable,pack=config.mainPack||exe+'.pck';
 const start=document.getElementById('start'),status=document.getElementById('status'),progress=document.getElementById('progress'),landing=document.getElementById('landing');
 const say=text=>{status.textContent=text};
@@ -109,17 +109,20 @@ if(inApp){
 // Start downloading right away, except where the visitor is about to switch browser or asked to save data.
 const saveData=!!(navigator.connection&&navigator.connection.saveData);
 if(!missing.length&&!inApp&&!saveData)beginLoad();
-// The big countdown. The first frame blocks the page, so script cannot tick it: everything here is a transform or opacity
-// animation, which the browser's compositor keeps running by itself. It starts from how long this device took last time.
-const countdown=document.getElementById('countdown'),strip=document.getElementById('cdStrip');
+// The big countdown. The first frame blocks the page: scripts stop, and on an iPhone so do CSS animations (the number stayed at 20).
+// A video keeps playing, because the phone's media system draws it, so the countdown is a video (tools/make_countdown_video.py).
+// The CSS numbers underneath stay for a browser that will not play it. It starts from how long this device took last time.
+const countdown=document.getElementById('countdown'),digits=document.getElementById('cdDigits'),dial=document.getElementById('cdDial'),cdVideo=document.getElementById('cdVideo');
 let waitStart=0;
-const waitSeconds=()=>{let seen=0;try{seen=Number(localStorage.getItem('campus-wait-seconds'))||0}catch(error){}return seen?Math.min(30,Math.max(5,Math.ceil(seen)+2)):20};
+const waitSeconds=()=>{let seen=0;try{seen=Number(localStorage.getItem('campus-wait-seconds'))||0}catch(error){}return seen?Math.min(20,Math.max(5,Math.ceil(seen)+2)):20};
 const showCountdown=()=>{
  const seconds=waitSeconds();
- strip.innerHTML=Array.from({length:seconds},(_,i)=>'<span>'+(seconds-i)+'</span>').join('');
- strip.style.animation='cd-roll '+(seconds-1)+'s steps('+(seconds-1)+',end) forwards';
- countdown.style.setProperty('--seconds',seconds);countdown.style.setProperty('--wait',seconds+'s');
+ digits.innerHTML=Array.from({length:seconds},(_,i)=>'<span'+(i==seconds-1?' class="cd-last"':'')+' style="animation-delay:'+i+'s">'+(seconds-i)+'</span>').join('');
+ countdown.style.setProperty('--wait',seconds+'s');
  countdown.classList.remove('hidden');waitStart=performance.now();
+ cdVideo.addEventListener('playing',()=>dial.classList.add('playing'),{once:true});
+ try{cdVideo.currentTime=20-seconds}catch(error){}
+ cdVideo.play().catch(()=>{});
 };
 const reveal=()=>{
  if(landing.classList.contains('hidden'))return;
@@ -129,6 +132,8 @@ const reveal=()=>{
 window.campusReady=()=>{ready=true;if(started)reveal()};
 start.onclick=async()=>{
  if(missing.length)return;
+ // Inside the tap, so that a phone in low power mode lets the video play later.
+ cdVideo.play().then(()=>{if(!countdown.classList.contains('hidden'))return;cdVideo.pause();cdVideo.currentTime=0}).catch(()=>{});
  launched=true;start.disabled=true;progress.classList.remove('hidden');
  if(!loaded)say('正在下載校園…');
  try{
@@ -137,8 +142,8 @@ start.onclick=async()=>{
   // The first frame compiles the 3D shaders and blocks the page, so show the message before starting.
   say('正在準備 3D 畫面…第一次約需 10～20 秒，之後再開會快很多。');
   showCountdown();
-  // Two frames, so the animations have reached the compositor before the page blocks.
-  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(resolve,100))));
+  // Long enough for the video to be running before the page blocks.
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(resolve,300))));
   const touch=matchMedia('(pointer: coarse)').matches||navigator.maxTouchPoints>0;
   await engine.start({args:['--main-pack',pack].concat(touch?['--','--touch-ui']:[]),onExit:()=>location.reload()});
   started=true;
