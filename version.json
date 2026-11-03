@@ -1,7 +1,7 @@
 ﻿{
-    "version":  "0.31.8",
-    "download_bytes":  31761148,
-    "preload_bytes":  26641166,
+    "version":  "0.31.9",
+    "download_bytes":  31763429,
+    "preload_bytes":  26643447,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
@@ -9,7 +9,7 @@
                                        },
                   "index.html":  {
                                      "bytes":  17911,
-                                     "sha256":  "d62eb6176fda79273fd7253eaf952d35ba3218b911ab182d09e0ab1e53f03b26"
+                                     "sha256":  "5e0301d17c263d9997b32d80f12240d3cbc85edf4fffc3619c1bb0d533ec0823"
                                  },
                   "photos/aquaponics.webp":  {
                                                  "bytes":  153790,
@@ -120,8 +120,8 @@
                                           "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
                                       },
                   "index.pck":  {
-                                    "bytes":  19285600,
-                                    "sha256":  "cc1102ce605baab334ad46312e7a063792617176b152d03506919a4c5e927dc2"
+                                    "bytes":  19287360,
+                                    "sha256":  "7b2559f78c5727e738d4c92abb4acd5aa5dc76ff6777d8c7c3ad71e27137c761"
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,

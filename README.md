@@ -6,9 +6,9 @@
 
 電腦：WASD 移動、滑鼠環視、空白鍵跳躍、Q 遊具、E 景點介紹、Esc 暫停。
 
-手機：支援橫直式，左下搖桿移動、右側滑動環視，右下互動／跳躍／慢跑。
+手機：支援橫直式，左半邊拖曳移動、右側滑動環視，右下互動／跳躍／慢跑。
 
-首次開啟約需下載 22 MB（實際傳輸量，網頁一打開就會在背景先下載），建議使用 Wi-Fi；使用支援 WebGL 2 的新版瀏覽器。低效能裝置可能較慢。挑戰與聲音設定保存在目前瀏覽器。
+首次開啟約需下載 32 MB（實際傳輸量，網頁一打開就會在背景先下載），建議使用 Wi-Fi；使用支援 WebGL 2 的新版瀏覽器。低效能裝置可能較慢。挑戰與聲音設定保存在目前瀏覽器。
 
 本儲存庫為 Godot Web 發布成品；場景為依照片重建的探索原型，比例仍持續校正。公開版只含 16 張經學校確認、沒有學生入鏡的縮小實景照片（photos/），不含其他校園照片、配置原圖與照片貼圖；本機版保留完整實景對照。校園作品未以開源授權釋出。第三方字型及模型授權請見 NOTO-LICENSE.txt、KENNEY-LICENSE.txt；Godot 引擎授權：https://godotengine.org/license/。
 
@@ -20,7 +20,7 @@ Made with ❤️ by [阿凱老師](https://www.smes.tyc.edu.tw/modules/school/in
 
 ## 🔗 阿凱老師教育工具集
 
-這個專案是[阿凱老師教育工具集](https://cagoooo.github.io/Akai/)的 **#128 石門・校園漫遊**，由桃園市龍潭區石門國民小學阿凱老師開發。
+這個專案是[阿凱老師教育工具集](https://cagoooo.github.io/Akai/)的 **#128 石門・心晴校園**，由桃園市龍潭區石門國民小學阿凱老師開發。
 
 - 工具介紹頁：[https://cagoooo.github.io/Akai/tool/128/](https://cagoooo.github.io/Akai/tool/128/)
 - 線上使用：[https://cagoooo.github.io/shimen-campus-game/](https://cagoooo.github.io/shimen-campus-game/)
