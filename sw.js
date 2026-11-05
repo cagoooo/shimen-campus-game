@@ -4,7 +4,7 @@
    whose content did not change is served from here, a changed one is fetched, checked against the hash and stored.
    HTML and version.json always come from the network; music and video (range requests) are left to the browser. */
 const CACHE = 'shimen-campus-files-v1';
-const KEEP = /\.(wasm|pck|js|webp|png)$/;
+const KEEP = /\.(wasm|pck|js|webp|png|woff2)$/;
 let manifest = null, manifestAt = 0;
 
 self.addEventListener('install', () => self.skipWaiting());

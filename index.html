@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.0" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.0" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.0" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.0" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.1" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.1" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.1" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.1" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -35,23 +35,119 @@
 <meta name="twitter:image:alt" content="石門・心晴校園遊戲宣傳圖。">
 
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#193e35;color:#fff8e8;font-family:system-ui,"Microsoft JhengHei",sans-serif}body{overflow:hidden}#canvas{display:block;position:absolute;left:env(safe-area-inset-left,0px);top:env(safe-area-inset-top,0px);width:calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));height:calc(100% - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));outline:0;touch-action:none}#landing{position:fixed;inset:0;overflow:auto;padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom));display:grid;place-items:center;background:radial-gradient(ellipse at 15% 0%,#426d50,transparent 70%),#193e35}.card{width:min(100%,620px)}.eyebrow{letter-spacing:.18em;font-size:13px;color:#c5d8b9}h1{font-size:clamp(36px,8vw,62px);letter-spacing:.06em;margin:22px 0}p{line-height:1.8;color:#e2e7d5}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}button{font:inherit;cursor:pointer;border:1px solid #ffffff50;border-radius:14px;padding:15px 24px;background:#fff5d6;color:#173e32;font-weight:700;min-height:52px}button:disabled{opacity:.65;cursor:wait}button.secondary{background:transparent;color:inherit}.tips{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tips section{border-top:1px solid #ffffff40;padding-top:12px}.tips h2{font-size:16px}small,footer{font-size:12px;color:#c9d9c1}footer{margin-top:28px}a{color:#fff1b0;text-underline-offset:4px}progress{width:100%;height:10px;accent-color:#ffcf64}#status{min-height:28px;font-size:14px}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}.inapp{display:grid;gap:8px;margin:18px 0;padding:14px 16px;border:1px solid #ffcf6488;border-radius:14px;background:#ffcf6418;font-size:14px;line-height:1.7}.inapp b{color:#ffe7a3}.inapp-actions{display:flex;flex-wrap:wrap;gap:10px}.inapp button{min-height:42px;padding:8px 16px}@media(max-width:440px){h1{font-size:38px}.tips{grid-template-columns:1fr}h1{margin:16px 0}.actions{margin:18px 0}}
+@font-face{font-family:"CubicTitle";src:url(landing-title.woff2) format("woff2");font-display:swap}
+:root{--board:#16362e;--board-deep:#0e2a23;--night:#0c1834;--cream:#fff5d6;--cream-2:#f3e6bf;--amber:#ffcf64;--amber-deep:#c9952b;--coral:#ff8f7a;--sky:#8fd3ff;--ink:#173e32;--muted:#d3dcea;--line:#ffffff2e;--fs-sm:clamp(14px,.35vw + 12.5px,16px);--fs-md:clamp(16px,.5vw + 13px,19px);--fs-lg:clamp(19px,.8vw + 14px,24px);--title:"CubicTitle",system-ui,"Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--night);color:var(--cream);font-family:system-ui,"Microsoft JhengHei","PingFang TC",sans-serif}body{overflow:hidden}
+#canvas{display:block;position:absolute;left:env(safe-area-inset-left,0px);top:env(safe-area-inset-top,0px);width:calc(100% - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));height:calc(100% - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));outline:0;touch-action:none}
+#landing{position:fixed;inset:0;overflow:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;background:linear-gradient(90deg,#0c1834e6 0%,#0c1834b3 40%,#0c183433 100%),linear-gradient(#ffffff06 1px,transparent 1px) 0 0/36px 36px,linear-gradient(90deg,#ffffff06 1px,transparent 1px) 0 0/36px 36px,url(landing-bg.webp) center bottom/cover no-repeat,var(--night)}
+.stage{width:min(100%,1600px);margin:0 auto;padding:max(18px,env(safe-area-inset-top)) clamp(16px,4vw,56px) 0}
+a{color:#ffe7a3;text-underline-offset:4px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0 4px}
+.brand{display:flex;align-items:center;gap:12px;font-size:var(--fs-sm);color:var(--muted);letter-spacing:.06em}.brand img{width:40px;height:40px;border-radius:11px;box-shadow:0 4px 0 #0007}.brand b{display:block;color:var(--cream);font-size:var(--fs-md);letter-spacing:.04em}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#ffffff14;border-radius:999px;padding:6px 14px;font-size:13px;color:var(--muted);white-space:nowrap}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(28px,4.5vw,80px);align-items:center;min-height:min(calc(100vh - 90px),820px);padding:clamp(16px,3vh,40px) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:var(--fs-sm);letter-spacing:.16em;color:#e3e9f5}.eyebrow::before{content:"";width:12px;height:12px;background:var(--amber);box-shadow:4px 4px 0 var(--coral)}
+h1{font-family:var(--title);font-weight:400;font-size:clamp(34px,5.2vw,100px);word-break:keep-all;line-height:1.08;letter-spacing:.04em;margin:.32em 0 .28em;color:var(--cream);text-shadow:0 5px 0 #08122a,0 0 40px #ffcf6433}h1 span{color:var(--amber)}
+.lead{font-size:var(--fs-md);line-height:1.85;color:#e9eef7;margin:0;max-width:34em}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}.tags li{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;background:#08122ab3;border:1px solid var(--line);font-size:var(--fs-sm);font-weight:600}.tags i{width:10px;height:10px;flex:none;background:var(--c,var(--amber))}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 18px}
+button{font:inherit;cursor:pointer;border:1px solid #ffffff50;border-radius:16px;padding:15px 24px;background:var(--cream);color:var(--ink);font-weight:700;min-height:52px;transition:transform .15s,box-shadow .15s,background .15s}
+#start{font-size:var(--fs-lg);padding:18px 34px;background:var(--amber);border-color:#ffe39a;box-shadow:0 7px 0 var(--amber-deep),0 18px 30px -12px #000a}#start::after{content:"　→"}
+#start:not(:disabled):hover{transform:translateY(-2px);box-shadow:0 9px 0 var(--amber-deep),0 22px 34px -12px #000a}#start:not(:disabled):active{transform:translateY(5px);box-shadow:0 2px 0 var(--amber-deep)}
+button:disabled{opacity:.7;cursor:wait}button.secondary{background:#ffffff14;color:inherit;box-shadow:0 7px 0 #08122a}button.secondary:hover{background:#ffffff26}
+button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.loadbox{max-width:560px;padding:14px 16px;border-radius:14px;background:#08122ab8;border:1px solid var(--line)}
+progress{display:block;width:100%;height:12px;margin-bottom:10px;border:0;border-radius:999px;background:#ffffff22;overflow:hidden;-webkit-appearance:none;appearance:none;accent-color:var(--amber)}progress::-webkit-progress-bar{background:#ffffff22;border-radius:999px}progress::-webkit-progress-value{background:linear-gradient(90deg,var(--amber),var(--coral));border-radius:999px}progress::-moz-progress-bar{background:linear-gradient(90deg,var(--amber),var(--coral));border-radius:999px}
+#status{margin:0;min-height:24px;font-size:var(--fs-sm);line-height:1.6;color:#e9eef7}
+.shot{position:relative;margin:0;padding:0 0 8% 6%}
+.frame{position:relative;aspect-ratio:1280/731;border-radius:22px;overflow:hidden;border:6px solid var(--cream);background:#0b1f1a;box-shadow:14px 14px 0 #08122a,0 40px 70px -24px #000c;transform:rotate(-1.4deg)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.frame .night{animation:daynight 14s ease-in-out infinite}
+.when{position:absolute;right:14px;top:14px;display:grid}.when span{grid-area:1/1;padding:8px 14px;border-radius:999px;font-size:var(--fs-sm);font-weight:700;color:var(--ink);background:var(--cream);box-shadow:0 4px 0 #0006}.when .n{background:#24306b;color:#fff1c2;animation:daynight 14s ease-in-out infinite}
+@keyframes daynight{0%,38%{opacity:0}50%,88%{opacity:1}100%{opacity:0}}
+.people{position:absolute;left:-3%;bottom:-3%;width:36%;max-width:300px;height:auto;filter:drop-shadow(0 14px 14px #0008);pointer-events:none}
+.sticker{position:absolute;right:-1%;bottom:3%;transform:rotate(3deg);padding:12px 16px;border-radius:14px;background:var(--coral);color:#3a1410;font-weight:800;font-size:var(--fs-sm);box-shadow:6px 6px 0 #08122a;line-height:1.5}
+.section-title{font-family:var(--title);font-weight:400;font-size:clamp(28px,2.6vw,42px);letter-spacing:.06em;margin:0 0 6px;color:var(--cream);text-shadow:0 4px 0 #08122a}.section-sub{margin:0 0 26px;color:var(--muted);font-size:var(--fs-md)}
+.features{padding:clamp(30px,5vh,64px) 0 10px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.6vw,24px);margin:0;padding:0;list-style:none}
+.cards li{background:#fcf2d5;color:var(--ink);border-radius:20px;padding:18px 20px 24px;box-shadow:8px 8px 0 #08122a;transition:transform .2s}.cards li:nth-child(even){transform:translateY(14px)}.cards li:hover{transform:translateY(-4px)}
+.cards img{display:block;width:112px;height:112px;margin:0 0 10px -6px}.cards h3{font-family:var(--title);font-weight:400;font-size:clamp(20px,1.5vw,26px);margin:0 0 8px;letter-spacing:.04em}.cards p{margin:0;font-size:var(--fs-sm);line-height:1.75;color:#3e5a4f}
+.cards .tag{display:inline-block;margin-bottom:8px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--c)}
+.howto{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,1.6vw,24px);padding:clamp(40px,6vh,72px) 0 clamp(36px,5vh,56px)}
+.howto section{padding:22px 24px;border-radius:20px;background:#08122ad9;border:1px solid var(--line)}.howto h2{font-family:var(--title);font-weight:400;font-size:clamp(22px,1.7vw,28px);margin:0 0 14px;letter-spacing:.05em}
+.howto ul{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:var(--fs-sm);color:#e9eef7}.howto li{line-height:2}
+kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-radius:8px;background:var(--cream);color:var(--ink);font:700 13px/1.4 system-ui,sans-serif;text-align:center;box-shadow:0 3px 0 var(--cream-2),0 4px 0 #0007}.howto em{font-style:normal;color:var(--amber);font-weight:700}
+.inapp{display:grid;gap:8px;margin:18px 0 0;padding:14px 16px;border:1px solid #ffcf6488;border-radius:14px;background:#ffcf6418;font-size:var(--fs-sm);line-height:1.7;max-width:560px}.inapp b{color:#ffe7a3}.inapp-actions{display:flex;flex-wrap:wrap;gap:10px}.inapp button{min-height:42px;padding:8px 16px}
+.site-footer{position:relative;margin-top:8px;background:linear-gradient(#0f2c24,#0b211b);border-top:1px solid var(--line)}.site-footer::before{content:"";position:absolute;left:0;right:0;top:-1px;height:4px;background:linear-gradient(90deg,var(--amber),var(--coral),var(--sky))}
+.footer-inner{width:min(100%,1600px);margin:0 auto;padding:34px clamp(16px,4vw,56px) 18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px;align-items:start}
+.footer-brand{display:flex;gap:14px;align-items:center}.footer-brand img{width:48px;height:48px;border-radius:13px;box-shadow:0 4px 0 #000a}.footer-brand strong{display:block;font-family:var(--title);font-weight:400;font-size:22px;letter-spacing:.05em}.footer-brand span{font-size:var(--fs-sm);color:#c9dccf}
+.footer-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}.footer-points li{display:flex;gap:10px;align-items:flex-start;font-size:var(--fs-sm);line-height:1.6;color:#c9dccf}.footer-points b{display:block;color:var(--cream)}.fp-icon{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:#ffffff12;font-size:18px}
+.footer-bottom{width:min(100%,1600px);margin:0 auto;padding:14px clamp(16px,4vw,56px) max(22px,env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #ffffff1a;font-size:var(--fs-sm);color:#c9dccf}
+.site-credit{margin:0}.site-credit__heart{display:inline-block;margin:0 2px}.site-credit__author{color:#ffe7a3;text-decoration:none;border-bottom:1px dotted currentColor;padding-bottom:1px}.site-credit__author:hover{color:var(--amber)}
+#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards li:nth-child(even){transform:none}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0;gap:28px}.shot{padding:0 0 10% 4%;max-width:720px}.footer-inner{grid-template-columns:1fr}#landing{background:linear-gradient(#0c1834cc,#0c1834ee),url(landing-bg.webp) center bottom/cover no-repeat,var(--night)}}
+@media(max-width:640px){.howto{grid-template-columns:1fr}.footer-points{grid-template-columns:1fr}.topbar .pill{display:none}.brand b{font-size:16px}.sticker{font-size:13px;padding:8px 12px}.footer-bottom{flex-direction:column;text-align:center}}
+@media(max-width:520px){h1{font-size:11.2vw}.cards{grid-template-columns:1fr}.cards li{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:14px;align-items:start;padding:16px}.cards img{grid-row:1/span 3;width:84px;height:84px;margin:0}.cards .tag{justify-self:start}.actions{gap:10px}#start{flex:1 1 100%;padding:16px 20px}button.secondary{flex:1 1 100%}.when span{font-size:12px;padding:6px 10px}}
+@media(prefers-reduced-motion:reduce){.frame .night,.when .n{animation:none;opacity:0}button,.cards li{transition:none}}
 #countdown{position:fixed;inset:0;z-index:2;--dial:min(60vmin,420px);display:grid;place-content:center;justify-items:center;gap:6px;padding:24px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2f6650,transparent 70%),#193e35}.cd-dial{position:relative;width:var(--dial);height:var(--dial);display:grid;place-items:center}.cd-ring{position:absolute;inset:0;border-radius:50%;border:calc(var(--dial)*.03) solid #ffffff1f;border-top-color:#ffcf64;will-change:transform;animation:cd-spin 1.2s linear infinite}.cd-window{position:relative;width:1.4em;height:1em;font-size:calc(var(--dial)*.5);line-height:1;font-weight:800;color:#ffcf64;font-variant-numeric:tabular-nums}.cd-window span{position:absolute;inset:0;text-align:center;opacity:0;will-change:opacity,transform;animation:cd-tick 1s linear both}.cd-window .cd-last{animation-name:cd-hold}.cd-title{margin:10px 0 0;font-size:clamp(20px,5vmin,28px);font-weight:700;letter-spacing:.08em;color:#fff8e8}.cd-note{position:relative;margin:0;min-height:1.8em;font-size:clamp(14px,3.4vmin,17px)}.cd-note span{display:block;will-change:opacity;animation:cd-out .4s var(--wait) forwards}.cd-note .cd-late{position:absolute;inset:0;opacity:0;animation:cd-in .4s var(--wait) forwards}@keyframes cd-spin{to{transform:rotate(1turn)}}@keyframes cd-tick{0%{opacity:0;transform:scale(1.2)}6%{opacity:1}28%{transform:scale(1)}94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}@keyframes cd-hold{0%{opacity:0;transform:scale(1.2)}6%{opacity:1}28%,100%{opacity:1;transform:scale(1)}}@keyframes cd-out{to{opacity:0}}@keyframes cd-in{to{opacity:1}}.cd-dial video{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;opacity:0}.cd-dial.playing video{opacity:1}.cd-dial.playing .cd-ring,.cd-dial.playing .cd-window{visibility:hidden}@media(prefers-reduced-motion:reduce){.cd-ring{animation-duration:4s}}
 </style>
 </head>
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
-<main id="landing"><div class="card">
+<main id="landing"><div class="stage">
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.1" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<section class="hero">
+<div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
-<h1>石門・心晴校園</h1>
-<p>走進方塊版石門校園，跟著「心晴任務」幫同學解決小麻煩，還能自己蓋方塊。<br>家長也可以用「校園導航」看孩子怎麼從校門走到班級。</p>
+<h1>石門・<span>心晴</span>校園</h1>
+<p class="lead">走進方塊版石門校園，跟著「心晴任務」幫同學解決小麻煩、認識自己的性格，還能自己蓋方塊。家長也可以用「校園導航」看孩子怎麼從校門走到班級。</p>
+<ul class="tags"><li><i style="--c:var(--coral)"></i>SEL 社會情緒學習</li><li><i style="--c:var(--sky)"></i>MBTI 性格卡</li><li><i style="--c:var(--amber)"></i>跟著台灣時間的日夜</li></ul>
 <div id="inapp" class="inapp hidden" role="note"><b>建議改用瀏覽器開啟</b><span>你正在 App 內建瀏覽器裡開啟。3D 校園用 Safari 或 Chrome 會更順，挑戰紀錄也比較不會遺失。請點右上角「⋯」選「用瀏覽器開啟」。</span><div class="inapp-actions"><button id="chrome" class="hidden">用 Chrome 開啟</button><button class="secondary" id="copy">複製連結</button></div></div>
 <div class="actions"><button id="start">開始校園冒險</button><button class="secondary" id="fullscreen">全螢幕</button></div>
-<progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p>
-<div class="tips"><section><h2>電腦遊玩</h2><p>WASD 移動・滑鼠環視<br>空白鍵跳躍・Q 操作遊具<br>V 第一人稱・X 建造方塊<br>J 心晴任務・N 校園導航・Esc 暫停</p></section><section><h2>手機遊玩</h2><p>左半邊拖曳移動・右側滑動環視<br>上方「視角」切換第一人稱、「建造」蓋方塊<br>走到角色身邊就會自動對話</p></section></div>
-<small>校園探索原型 0.35.0・校園變成方塊世界，還能自己蓋方塊！<br>挑戰與任務進度保存在目前瀏覽器；清除網站資料後會重設。<br>龍潭即時天氣資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></small>
-<footer>Made with ❤️ by <a href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a></footer>
+<div class="loadbox"><progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p></div>
 </div>
+<figure class="shot" aria-label="遊戲畫面：方塊版石門校園的白天與夜晚">
+<div class="frame"><img src="landing-day.webp" alt="方塊版石門校園的白天俯瞰" width="1280" height="731" fetchpriority="high"><img class="night" src="landing-night.webp" alt="" width="1280" height="731"><div class="when" aria-hidden="true"><span>☀️ 白天的校園</span><span class="n">🌙 夜晚・教室亮燈</span></div></div>
+<img class="people" src="landing-people.webp" alt="" width="600" height="600">
+<div class="sticker">跟著台灣時間<br>白天・傍晚・夜晚</div>
+</figure>
+</section>
+<section class="features" aria-labelledby="features-title">
+<h2 class="section-title" id="features-title">在校園裡可以做什麼？</h2>
+<p class="section-sub">一邊認識真實的石門校園，一邊練習和同學好好相處</p>
+<ul class="cards">
+<li><img src="landing-sel.webp" alt="" width="112" height="112" loading="lazy"><span class="tag" style="--c:#e2604c">SEL</span><h3>心晴任務</h3><p>六個章節幫同學解決校園小麻煩，練習友善、合作、同理、做決定，集滿徽章成為「心晴之星」</p></li>
+<li><img src="landing-card.webp" alt="" width="112" height="112" loading="lazy"><span class="tag" style="--c:#3a8cc4">MBTI</span><h3>性格卡</h3><p>任務中回答 12 個小問題，抽出 16 種性格卡的其中一張，看見自己的優點和相處小建議</p></li>
+<li><img src="landing-nav.webp" alt="" width="112" height="112" loading="lazy"><span class="tag" style="--c:#2f8a63">導航</span><h3>校園導航</h3><p>選好教室，地上的箭頭就會帶路，從校門走到每一間教室，新生和家長也能先認識校園</p></li>
+<li><img src="landing-build.webp" alt="" width="112" height="112" loading="lazy"><span class="tag" style="--c:#c98a12">建造</span><h3>蓋方塊・看夜晚</h3><p>點一下放方塊、按住就拆掉；校園跟著台灣時間變成傍晚和星空夜晚，教室窗戶還會亮燈</p></li>
+</ul>
+</section>
+<section class="howto" aria-label="操作方式">
+<section><h2>💻 電腦遊玩</h2><ul>
+<li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移動，滑鼠環視</li>
+<li><kbd>空白鍵</kbd> 跳躍　<kbd>Q</kbd> 操作遊具</li>
+<li><kbd>V</kbd> 第一人稱　<kbd>X</kbd> 蓋方塊</li>
+<li><kbd>J</kbd> 心晴任務　<kbd>N</kbd> 校園導航　<kbd>Esc</kbd> 暫停</li>
+</ul></section>
+<section><h2>📱 手機・平板遊玩</h2><ul>
+<li>左半邊<em>拖曳</em>移動，右側<em>滑動</em>環視</li>
+<li>上方「視角」切換第一人稱</li>
+<li>「建造」後<em>點一下</em>放方塊、<em>按住</em>拆掉</li>
+<li>走到角色身邊就會自動對話</li>
+</ul></section>
+</section>
+</div>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand"><img src="favicon.svg?v=0.35.1" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<ul class="footer-points">
+<li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設</div></li>
+<li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
+<li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
+</ul>
+</div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.1</span></div>
+</footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
