@@ -1,15 +1,16 @@
 ﻿{
-    "version":  "0.34.1",
-    "download_bytes":  31793145,
-    "preload_bytes":  26673163,
+    "version":  "0.35.0",
+    "download_bytes":  22427692,
+    "preload_bytes":  17307710,
+    "blocks_bytes":  9377638,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
                                            "sha256":  "e861c22539ffa803322dfc85aab1e2b286c47e10580ee5bc5ec009645b71b9c1"
                                        },
                   "index.html":  {
-                                     "bytes":  17911,
-                                     "sha256":  "7c0c8091b384ff2934b51f2ee6b76b95cdb5076c415c7dc3f85d8291cd96282f"
+                                     "bytes":  19920,
+                                     "sha256":  "e58b29e58a7a5d92719b6d0cf6f81083e9941b9eb331e2d20069cf023d116c45"
                                  },
                   "photos/aquaponics.webp":  {
                                                  "bytes":  153790,
@@ -40,8 +41,9 @@
                                                 "sha256":  "1e31636f9c84eed7e45a49e1f8392477b49c0837bc81ebec4193b293c79ed0ef"
                                             },
                   "index.wasm":  {
-                                     "bytes":  39514754,
-                                     "sha256":  "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+                                     "sha256":  "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+                                     "gzip":  10114291,
+                                     "bytes":  39514754
                                  },
                   "photos/courtyard_play.webp":  {
                                                      "bytes":  196962,
@@ -120,8 +122,9 @@
                                           "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
                                       },
                   "index.pck":  {
-                                    "bytes":  19317880,
-                                    "sha256":  "556427bed10ec980ed7010f1c0e1d0c87f85cdb18c23a8be8129336caf9ea066"
+                                    "sha256":  "9df23bfe38c5f8602cb8605c7ed0a535b0ef7aaf8176182f1db77b231b5882ca",
+                                    "gzip":  7124679,
+                                    "bytes":  7689468
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -147,17 +150,27 @@
                                           "bytes":  256796,
                                           "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
                                       },
+                  "blocks.pck":  {
+                                     "sha256":  "2723653606a59e997f8be2975ae882d1171d9b523e87f1d3f72576796f0627cf",
+                                     "gzip":  9377638,
+                                     "bytes":  11642852
+                                 },
+                  "index.js":  {
+                                   "sha256":  "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+                                   "gzip":  68740,
+                                   "bytes":  279815
+                               },
                   "audio/bell-preview.mp3":  {
                                                  "bytes":  32660,
                                                  "sha256":  "bc915e5008fa4e74aee143bcd708ddedbbcae4238e7e5d5ac303d3ca26ada7f9"
                                              },
-                  "index.js":  {
-                                   "bytes":  279815,
-                                   "sha256":  "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
-                               },
                   "photos/courtyard_arch.webp":  {
                                                      "bytes":  107234,
                                                      "sha256":  "a35b0d111c177bcba843d31c9e6b2f5d2023d55a7ea74dd113dc28054481cbcf"
-                                                 }
+                                                 },
+                  "sw.js":  {
+                                "bytes":  4529,
+                                "sha256":  "63107a3181881c9f3bd4a33b66fed279d3a175aaedad41d08f9af6baf03cac22"
+                            }
               }
 }
