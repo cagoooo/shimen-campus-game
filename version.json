@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.35.7",
-    "download_bytes":  22482233,
-    "preload_bytes":  17362251,
-    "blocks_bytes":  9555539,
+    "version":  "0.35.8",
+    "download_bytes":  22490650,
+    "preload_bytes":  17370668,
+    "blocks_bytes":  9555538,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
@@ -14,7 +14,7 @@
                                           },
                   "index.html":  {
                                      "bytes":  32677,
-                                     "sha256":  "78e92b311099a3194e9e3ad5bb7deba9a17ff2630cea8da66677bee8257d066f"
+                                     "sha256":  "4c6abee1706597a89710247dc2625ee06652729f2ac7e84d3297e4e9516dac9a"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -146,9 +146,9 @@
                                           "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
                                       },
                   "index.pck":  {
-                                    "sha256":  "b629b6a487e9ac79856290e33dbd32197794d591f97188dfff421a306af3f1b5",
-                                    "gzip":  7179220,
-                                    "bytes":  7794744
+                                    "sha256":  "15955295bf269c20f8a14ca3a6f0248606fb9123bed13f75881d1f3de8ffc9ea",
+                                    "gzip":  7187637,
+                                    "bytes":  7803264
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -179,8 +179,8 @@
                                           "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
                                       },
                   "blocks.pck":  {
-                                     "sha256":  "e68a5bf4edfd4ca011a69bacc638cda132ba246116785ed563b12b937658dc7c",
-                                     "gzip":  9555539,
+                                     "sha256":  "c5803183b38ba572996e7b1a1b1c7d64a79922d1bb69ec31459b8ee4841be7d5",
+                                     "gzip":  9555538,
                                      "bytes":  11740452
                                  },
                   "index.js":  {
@@ -200,6 +200,10 @@
                                              "bytes":  5358,
                                              "sha256":  "bfdb1c67a7df3a2e6edfccdb1817adcb3e216f4ceb29ab4fd0733befbba1b7b4"
                                          },
+                  "photos/solar_roof.webp":  {
+                                                 "bytes":  144000,
+                                                 "sha256":  "3700aab82f656ed8f0cab425af4b9a64c7ee24a3985acb2b997ec76f53063df1"
+                                             },
                   "sw.js":  {
                                 "bytes":  4535,
                                 "sha256":  "d5587f28f398a9dcb339ab1edd5180cc12c9ecfdac24437dd57693dd08c008c0"
