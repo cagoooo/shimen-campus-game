@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.18" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.18" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.18" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.18" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.19" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.19" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.19" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.19" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -76,6 +76,7 @@ progress{display:block;width:100%;height:12px;margin-bottom:10px;border:0;border
 .howto section{padding:22px 24px;border-radius:20px;background:#08122ad9;border:1px solid var(--line)}.howto h2{font-family:var(--title);font-weight:400;font-size:clamp(22px,1.7vw,28px);margin:0 0 14px;letter-spacing:.05em}
 .howto ul{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:var(--fs-sm);color:#e9eef7}.howto li{line-height:2}
 kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-radius:8px;background:var(--cream);color:var(--ink);font:700 13px/1.4 system-ui,sans-serif;text-align:center;box-shadow:0 3px 0 var(--cream-2),0 4px 0 #0007}.howto em{font-style:normal;color:var(--amber);font-weight:700}
+.notice{max-width:560px;margin:22px 0 0;padding:14px 18px;border-radius:14px;background:var(--cream);color:var(--ink);border-left:8px solid var(--amber);box-shadow:0 6px 0 #08122a}.notice b{display:block;font-size:var(--fs-sm);letter-spacing:.08em;color:#8a4f0c;margin-bottom:4px}.notice p{margin:0;font-size:var(--fs-md);line-height:1.7;white-space:pre-line;overflow-wrap:anywhere}
 .inapp{display:grid;gap:8px;margin:18px 0 0;padding:14px 16px;border:1px solid #ffcf6488;border-radius:14px;background:#ffcf6418;font-size:var(--fs-sm);line-height:1.7;max-width:560px}.inapp b{color:#ffe7a3}.inapp-actions{display:flex;flex-wrap:wrap;gap:10px}.inapp button{min-height:42px;padding:8px 16px}
 .site-footer{position:relative;margin-top:8px;background:linear-gradient(#0f2c24,#0b211b);border-top:1px solid var(--line)}.site-footer::before{content:"";position:absolute;left:0;right:0;top:-1px;height:4px;background:linear-gradient(90deg,var(--amber),var(--coral),var(--sky))}
 .footer-inner{width:min(100%,1600px);margin:0 auto;padding:34px clamp(16px,4vw,56px) 18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px;align-items:start}
@@ -95,13 +96,14 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.18" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.19" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
 <h1>石門・<span>心晴</span>校園</h1>
 <p class="lead">走進方塊版石門校園，跟著「心晴任務」幫同學解決小麻煩、認識自己的性格，還能自己蓋方塊。家長也可以用「校園導航」看孩子怎麼從校門走到班級。</p>
 <ul class="tags"><li><i style="--c:var(--coral)"></i>SEL 社會情緒學習</li><li><i style="--c:var(--sky)"></i>MBTI 性格卡</li><li><i style="--c:var(--amber)"></i>跟著台灣時間的日夜</li></ul>
+<div id="notice" class="notice hidden" role="status" aria-live="polite"><b>📢 學校公告</b><p id="notice-text"></p></div>
 <div id="inapp" class="inapp hidden" role="note"><b>建議改用瀏覽器開啟</b><span>你正在 App 內建瀏覽器裡開啟。3D 校園用 Safari 或 Chrome 會更順，挑戰紀錄也比較不會遺失。請點右上角「⋯」選「用瀏覽器開啟」。</span><div class="inapp-actions"><button id="chrome" class="hidden">用 Chrome 開啟</button><button class="secondary" id="copy">複製連結</button></div></div>
 <div class="actions"><button id="start">開始校園冒險</button><button class="secondary" id="fullscreen">全螢幕</button></div>
 <div class="loadbox"><progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p></div>
@@ -139,18 +141,32 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.18" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.19" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.18</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.19</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
+<script>
+// 學校公告 (2026-11-14): the 設定 sheet of the school's GAS backend (backend/gas, docs/後端串接規劃.md). It never holds up the
+// game: a slow (8 s) or failed call leaves the card hidden. A plain GET with no extra headers, so the browser sends no preflight.
+// ?notice=文字 previews a notice without the backend; ?notice= (empty) shows none.
+(()=>{
+const card=document.getElementById('notice'),text=document.getElementById('notice-text');
+const show=value=>{const t=String(value||'').trim().slice(0,300);if(!t)return;text.textContent=t;card.classList.remove('hidden')};
+const preview=new URLSearchParams(location.search).get('notice');
+if(preview!==null){show(preview);return}
+const stop='AbortController' in window?new AbortController():null;
+const timer=setTimeout(()=>stop&&stop.abort(),8000);
+fetch('https://script.google.com/macros/s/AKfycbw6Z0xv0UTYEzoJTl51k63RBoBRWPkzQmp6aBMxnnx4qHrbd8ZXWRPr90ygLpDUI0QIsQ/exec?action=notice',stop?{signal:stop.signal}:{}).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.ok&&d.notice)show(d.notice.text)}).catch(()=>{}).finally(()=>clearTimeout(timer));
+})();
+</script>
 <script src="index.js"></script>
 <script src="campus-audio.js"></script>
 <script>
