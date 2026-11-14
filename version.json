@@ -1,7 +1,7 @@
 ﻿{
-    "version":  "0.35.27",
-    "download_bytes":  22231236,
-    "preload_bytes":  17111254,
+    "version":  "0.35.28",
+    "download_bytes":  22231728,
+    "preload_bytes":  17111746,
     "blocks_bytes":  9555542,
     "files":  {
                   "photos/gate.webp":  {
@@ -14,7 +14,7 @@
                                           },
                   "index.html":  {
                                      "bytes":  37896,
-                                     "sha256":  "ba99f87fe880f56752925693cdb71fffeb02e3c4d83cd26606c2e34ea3b7daa0"
+                                     "sha256":  "6c7fe695a1930a5ccd2605997b6da0c9b3e345a5ded8376c1e407f6f962a79d3"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -146,9 +146,9 @@
                                           "sha256":  "39ba07ad9c5ea0abce208936d4f261f356881337c12a16ee0d489130e4c0abe7"
                                       },
                   "index.pck":  {
-                                    "sha256":  "81840af7eb2f3137845f11fdd91c186f3a9bff38ac7dd3b7d642233d088ee0e9",
-                                    "gzip":  6928223,
-                                    "bytes":  7607808
+                                    "sha256":  "ef36597cc9403bf6f5622780e1f6c2f9a3bb8f8f22c3f8e90833983368a88e89",
+                                    "gzip":  6928715,
+                                    "bytes":  7608336
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -179,7 +179,7 @@
                                           "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
                                       },
                   "blocks.pck":  {
-                                     "sha256":  "4e0e2ff6e69d5bdee3319d65ef3b52ced00e480e66303f055eb61b7d279fe971",
+                                     "sha256":  "eaec12bf02ed2a1e3630e8fc21657bdc1d0539fa84912115ca03477c422389cf",
                                      "gzip":  9555542,
                                      "bytes":  11740452
                                  },
