@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.21" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.21" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.21" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.21" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.22" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.22" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.22" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.22" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -96,7 +96,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.21" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.22" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -141,14 +141,14 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.21" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.22" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.21</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.22</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
@@ -183,7 +183,7 @@ const url='https://script.google.com/macros/s/AKfycbw6Z0xv0UTYEzoJTl51k63RBoBRWP
 const session=Math.random().toString(36).slice(2,10).padEnd(8,'0');
 const version=((document.querySelector('.footer-bottom .pill')||{}).textContent||'').replace(/[^0-9.]/g,'');
 const seen=new Set();let places=[];const counts={photo:0,stamp:0,challenge:0,badge:0,story:0};
-let begun=false,minutes=0,since=null;
+let begun=false,minutes=0,since=null,seq=0; // seq: each 活動 send's number, so the backend takes a send delivered twice once
 const send=(body,leaving)=>{
  if(off)return;
  const text=JSON.stringify(Object.assign({session,version,test},body));
@@ -195,7 +195,7 @@ const flush=leaving=>{
  if(!begun)return;clock();
  const busy=places.length||Object.values(counts).some(n=>n>0)||minutes>=.1;
  if(!busy)return;
- send(Object.assign({action:'activity',minutes:Math.round(minutes*10)/10,landmarks:places},counts),leaving);
+ send(Object.assign({action:'activity',seq:seq++,minutes:Math.round(minutes*10)/10,landmarks:places},counts),leaving);
  places=[];minutes=0;for(const key in counts)counts[key]=0;
 };
 document.addEventListener('visibilitychange',()=>{if(!begun)return;if(document.hidden)flush(true);else since=performance.now()});
