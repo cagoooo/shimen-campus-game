@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.35.32",
+    "version":  "0.35.33",
     "download_bytes":  22255282,
     "preload_bytes":  17135300,
-    "blocks_bytes":  9555544,
+    "blocks_bytes":  9555539,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
@@ -13,8 +13,8 @@
                                               "sha256":  "bbec86d82806ae2d16efb2ff48f215b214c2ec120f05ca41714add9aedcbf281"
                                           },
                   "index.html":  {
-                                     "bytes":  37896,
-                                     "sha256":  "69e72e881705ab87f3f872b5ef4656095635776de297cffbba85be30fc5e986d"
+                                     "bytes":  38478,
+                                     "sha256":  "964fcea83177f669f30b2d28aa488954c6661e8ea14926eb524de612ed231b00"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -150,7 +150,7 @@
                                           "sha256":  "678ca681dcfdf0d20587ec1dc38c2690a064a2d8fd4f1544a496f6e161afada6"
                                       },
                   "index.pck":  {
-                                    "sha256":  "5e474584672802a4422e23abbd8faa00f17fc6b65f6e143ba6c2025a5d0495a1",
+                                    "sha256":  "41e6704afad3fe8fc6c7a74210935beab075abc5947b535f58acca662c8aadfb",
                                     "gzip":  6952269,
                                     "bytes":  7633524
                                 },
@@ -183,8 +183,8 @@
                                           "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
                                       },
                   "blocks.pck":  {
-                                     "sha256":  "ded193b3af83323b90633014b23ca32b045dcf6e2df77a659c14bb56c4c2fd32",
-                                     "gzip":  9555544,
+                                     "sha256":  "482d606584a4ba2409e93e8bf8a0f463bc09a270d38fc76369e7df6bbee9a393",
+                                     "gzip":  9555539,
                                      "bytes":  11740452
                                  },
                   "index.js":  {

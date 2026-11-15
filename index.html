@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.32" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.32" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.32" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.32" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.33" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.33" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.33" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.33" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -96,7 +96,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.32" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.33" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -141,14 +141,14 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.32" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.33" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.32</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&amp;zone_id=0&amp;page_id=2&amp;content_id=11&amp;type=news&amp;from_op=all_news#a5" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.33</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
@@ -313,10 +313,18 @@ const showCountdown=()=>{
  digits.innerHTML=Array.from({length:seconds},(_,i)=>'<span'+(i==seconds-1?' class="cd-last"':'')+' style="animation-delay:'+i+'s">'+(seconds-i)+'</span>').join('');
  countdown.style.setProperty('--wait',seconds+'s');
  countdown.classList.remove('hidden');waitStart=performance.now();
- cdVideo.addEventListener('playing',()=>dial.classList.add('playing'),{once:true});
  try{cdVideo.currentTime=20-seconds}catch(error){}
  cdVideo.play().catch(()=>{});
 };
+// The video shows only once it plays, and that is told by an event, which waits while the page is blocked. Started before the
+// video played, an iPhone showed the stopped CSS 20 the whole time (老師 2026-11-15). So wait for it, up to VIDEO_WAIT ms.
+const VIDEO_WAIT=2500;
+const videoRunning=()=>new Promise(resolve=>{
+ const done=()=>{clearTimeout(timer);cdVideo.removeEventListener('playing',done);if(!cdVideo.paused)dial.classList.add('playing');resolve()};
+ const timer=setTimeout(done,VIDEO_WAIT);
+ cdVideo.addEventListener('playing',done);
+ if(!cdVideo.paused&&cdVideo.readyState>=3)done();
+});
 const reveal=()=>{
  if(landing.classList.contains('hidden'))return;
  landing.classList.add('hidden');document.getElementById('canvas').focus();
@@ -335,8 +343,9 @@ start.onclick=async()=>{
   // The first frame compiles the 3D shaders and blocks the page, so show the message before starting.
   say('正在準備 3D 畫面…第一次約需 10～20 秒，之後再開會快很多。');
   showCountdown();
-  // Long enough for the video to be running before the page blocks.
-  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(resolve,300))));
+  // The video running and drawn before the page blocks; without it, the CSS numbers at least get painted.
+  await videoRunning();
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(resolve,200))));
   const touch=matchMedia('(pointer: coarse)').matches||navigator.maxTouchPoints>0;
   await engine.start({args:['--main-pack',pack].concat(touch?['--','--touch-ui']:[]),onExit:()=>location.reload()});
   started=true;
