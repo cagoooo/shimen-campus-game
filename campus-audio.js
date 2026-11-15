@@ -1,6 +1,6 @@
 /* Native media avoids starving Godot's single-threaded Web audio mixer. */
 (() => {
-  const sources = { music: 'school-song.mp3', birds: 'birds.mp3', wind: 'wind.mp3', bell: 'bell-preview.mp3' };
+  const sources = { music: 'school-song.mp3', birds: 'birds.mp3', wind: 'wind.mp3', bell: 'bell-preview.mp3', rain: 'rain.mp3' };
   const tracks = new Set();
   const retry = document.createElement('button');
   retry.textContent = '點此開啟聲音';
