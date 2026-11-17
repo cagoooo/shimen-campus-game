@@ -14,7 +14,7 @@
 
 本儲存庫為 Godot Web 發布成品；場景為依照片重建的探索原型，比例仍持續校正。公開版只含 16 張經學校確認、沒有學生入鏡的縮小實景照片（photos/），不含其他校園照片、配置原圖與照片貼圖；本機版保留完整實景對照。校園作品未以開源授權釋出。第三方字型及模型授權請見 NOTO-LICENSE.txt、KENNEY-LICENSE.txt；Godot 引擎授權：https://godotengine.org/license/。
 
-Made with ❤️ by [阿凱老師](https://www.smes.tyc.edu.tw/modules/school/index.php?department_id=2&zone_id=0&page_id=2&content_id=11&type=news&from_op=all_news#a5)
+Made with ❤️ by [阿凱老師](https://cagoooo.github.io/Akai/)
 
 <!-- akai-edu-tools:backlink -->
 
