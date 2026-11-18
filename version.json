@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.35.37",
-    "download_bytes":  21546270,
-    "preload_bytes":  16426288,
-    "blocks_bytes":  9446657,
+    "version":  "0.35.38",
+    "download_bytes":  23318401,
+    "preload_bytes":  18198419,
+    "blocks_bytes":  9446656,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
@@ -13,8 +13,8 @@
                                               "sha256":  "bbec86d82806ae2d16efb2ff48f215b214c2ec120f05ca41714add9aedcbf281"
                                           },
                   "index.html":  {
-                                     "bytes":  40226,
-                                     "sha256":  "fc13b14c5019b4b5af53121590737d4f2a946c3f768de3066b19af6c123ccf6b"
+                                     "bytes":  42474,
+                                     "sha256":  "84a60b226e4220689f55089c3b522de90850f6e53b3f9c34e1308e274ba37a5b"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -97,6 +97,10 @@
                                                      "bytes":  143704,
                                                      "sha256":  "81cf57fb64c8718cc9ec42c576592f93b3d7a8af3ef0c22826d946517e2c43da"
                                                  },
+                  "audio/birds.mp3":  {
+                                          "bytes":  256796,
+                                          "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
+                                      },
                   "favicon.svg":  {
                                       "bytes":  594,
                                       "sha256":  "55a94bf73cd86a09553a71e3dd304b2889271788b6e48ad352ac9c71d5bc2224"
@@ -162,9 +166,9 @@
                                           "sha256":  "823494d320401e6f2160edc42d2dc7b1237b3f4e4402b9afae997caa95e4cdab"
                                       },
                   "index.pck":  {
-                                    "sha256":  "688b652dbf69a55523dd6df08eb279cadbbc860e57b3f5f7137f7eefc62e85b2",
-                                    "gzip":  6243257,
-                                    "bytes":  6860316
+                                    "sha256":  "06b91873b81fe947d0108a9a07612cc7e5af0df5cb4b955a1c999380caeb745c",
+                                    "gzip":  8015388,
+                                    "bytes":  8653260
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -198,13 +202,13 @@
                                                  "bytes":  188258,
                                                  "sha256":  "0be3b7897859444104d27b89d07d2619a78615344af6aa309d5edac0a38b2e5c"
                                              },
-                  "audio/birds.mp3":  {
-                                          "bytes":  256796,
-                                          "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
-                                      },
+                  "shaders.json":  {
+                                       "bytes":  1265337,
+                                       "sha256":  "fcd7046837db4bc55c508f31c2cd39fec91bd367154f485decc480f5f929f7dc"
+                                   },
                   "blocks.pck":  {
-                                     "sha256":  "bac5bbd90bbce0262fc56802faef7d258c13de918966d1ec13d5cdd23de54845",
-                                     "gzip":  9446657,
+                                     "sha256":  "b22ce1e80de8c83029e33f780827b3baff0a38e561de397b992cdd07a16c593e",
+                                     "gzip":  9446656,
                                      "bytes":  11643636
                                  },
                   "index.js":  {

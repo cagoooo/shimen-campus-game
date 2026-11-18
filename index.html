@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.37" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.37" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.37" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.37" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.38" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.38" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.38" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.38" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -96,7 +96,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.37" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.38" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -141,14 +141,14 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.37" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.38" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.37</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.38</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
@@ -228,7 +228,7 @@ return {
 const weatherCode=new URLSearchParams(location.search).get('weather');
 if(weatherCode)window.campusWeather=JSON.stringify({weather_code:Number(weatherCode),temperature_2m:23,is_day:1});
 else fetch('https://api.open-meteo.com/v1/forecast?latitude=24.86&longitude=121.22&current=temperature_2m,weather_code,is_day&timezone=Asia%2FTaipei').then(r=>r.ok?r.json():null).then(data=>{if(data&&data.current)window.campusWeather=JSON.stringify(data.current)}).catch(()=>{});
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":6860316,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8653260,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const exe=config.executable,pack=config.mainPack||exe+'.pck';
 // 方塊包: the block world's cubes are their own file (scripts/block_pack.gd). New visitors start in the block world, so
 // only a visitor whose last look was realistic skips it; if the guess is wrong the campus fetches it itself.
@@ -264,9 +264,43 @@ config.onProgress=(current,total)=>{
 const engine=new Engine(config);
 document.getElementById('fullscreen').onclick=()=>{if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{say('此瀏覽器無法切換全螢幕，可直接開始遊戲。')});else say('此裝置可直接在瀏覽器內遊玩，橫直式皆可。')};
 document.getElementById('restart').onclick=()=>location.reload();
+// 先在背景編好 3D「畫法」 (2026-11-18 老師「背景準備的那幾秒，首頁卡住不能捲動」): the first frame compiles every shader
+// program and the engine waits for each one, about 20 s on a Windows PC (Chrome draws with Direct3D). shaders.json lists those
+// programs (tools/record_web_shaders.py); compiled here first on the browser's own worker threads, the page keeps scrolling,
+// and the engine then finds them in the browser's shader cache. The cache only matches with the same extensions turned on and
+// the same context settings, so those come from the list too. Without parallel compiling (Safari) this would block just the same: skipped.
+let warmed=null;
+const warmShaders=()=>{
+ if(warmed)return warmed;
+ warmed=fetch('shaders.json'+(release?'?v='+release:'')).then(r=>r.ok?r.json():null).then(list=>new Promise(resolve=>{
+  if(!list||!list.programs)return resolve();
+  const gl=document.createElement('canvas').getContext('webgl2',list.attributes);
+  const parallel=gl&&gl.getExtension('KHR_parallel_shader_compile');
+  if(!parallel)return resolve();
+  // The engine's own list (tools/record_web_shaders.py); a name this browser lacks just returns nothing.
+ for(const name of list.extensions)gl.getExtension(name);
+  const programs=list.programs.map(shaders=>{
+   const program=gl.createProgram();
+   for(const [kind,head,body] of shaders){const shader=gl.createShader(kind);gl.shaderSource(shader,list.heads[head]+'\n'+list.bodies[body]);gl.compileShader(shader);gl.attachShader(program,shader)}
+   gl.linkProgram(program);return program;
+  });
+  const until=performance.now()+30000;
+  const check=()=>{
+   if(performance.now()<until&&!programs.every(program=>gl.getProgramParameter(program,parallel.COMPLETION_STATUS_KHR)))return setTimeout(check,100);
+   // Asking whether each one linked finishes it inside the browser, which is when it goes into the cache (done by now, so
+   // this does not wait); the context is then let go, and the cache keeps the programs.
+   for(const program of programs)gl.getProgramParameter(program,gl.LINK_STATUS);
+   const lose=gl.getExtension('WEBGL_lose_context');if(lose)lose.loseContext();
+   resolve();
+  };
+  check();
+ })).catch(()=>{});
+ return warmed;
+};
 // Same steps as Engine.startGame, split so the download can begin while visitors read this page.
 const beginLoad=()=>{
  if(loading)return loading;
+ warmShaders();
  t0=changed=performance.now();progress.max=1;progress.value=0;
  stall=setInterval(()=>{if(!loaded&&!slow&&performance.now()-changed>20000){slow=true;say(status.textContent+'｜網路有點慢，可以稍候或改用 Wi-Fi')}},5000);
  loading=Promise.all([cabinet,versionInfo]).then(([,info])=>{
@@ -309,12 +343,12 @@ window.campusDrawn=()=>{drawn=true;if(launched&&ready)reveal();else if(!launched
 const boot=()=>{
  if(booting)return booting;
  const touch=matchMedia('(pointer: coarse)').matches||navigator.maxTouchPoints>0;
- booting=engine.start({args:['--main-pack',pack].concat(touch?['--','--touch-ui']:[]),onExit:()=>location.reload()}).then(()=>{started=true});
+ booting=warmShaders().then(()=>engine.start({args:['--main-pack',pack].concat(touch?['--','--touch-ui']:[]),onExit:()=>location.reload()})).then(()=>{started=true});
  return booting;
 };
 const preBoot=()=>{
  if(launched||booting||missing.length||inApp||saveData||document.hidden)return;
- say('校園下載好了，正在背景準備 3D 畫面，頁面可能暫停幾秒…');
+ say('校園下載好了，正在背景準備 3D 畫面…');
  // Painted before the pause starts.
  requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(()=>{
   if(launched||booting)return;
