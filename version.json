@@ -1,7 +1,7 @@
 ﻿{
-    "version":  "0.35.36",
-    "download_bytes":  21536083,
-    "preload_bytes":  16416101,
+    "version":  "0.35.37",
+    "download_bytes":  21546270,
+    "preload_bytes":  16426288,
     "blocks_bytes":  9446657,
     "files":  {
                   "photos/gate.webp":  {
@@ -13,8 +13,8 @@
                                               "sha256":  "bbec86d82806ae2d16efb2ff48f215b214c2ec120f05ca41714add9aedcbf281"
                                           },
                   "index.html":  {
-                                     "bytes":  38478,
-                                     "sha256":  "6450ce61f0086284b9930ebcb15c3611d87d9afd9890dbf3ce66a5118b6c1d45"
+                                     "bytes":  40226,
+                                     "sha256":  "fc13b14c5019b4b5af53121590737d4f2a946c3f768de3066b19af6c123ccf6b"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -52,6 +52,10 @@
                                            "bytes":  215518,
                                            "sha256":  "22e58542f117487fd1bef36521ab1e61dd2250059adfdc75f74d024165393596"
                                        },
+                  "photos/stairs_jiaowu.webp":  {
+                                                    "bytes":  112256,
+                                                    "sha256":  "a1f9f05a21ef097950ee2c223a83ec16cc8277c18959fd88f1f1b4d7c4ea1f48"
+                                                },
                   "landing-bg.webp":  {
                                           "bytes":  26632,
                                           "sha256":  "7f26a14d57729f845fde55df4488e7dd5c14a07c2611ecfb05bc466ddc8c711c"
@@ -81,6 +85,10 @@
                                                  "bytes":  7298,
                                                  "sha256":  "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
                                              },
+                  "murals/hippo.webp":  {
+                                            "bytes":  20360,
+                                            "sha256":  "b7b10a20e28d2ae08e06b2eae19a91c0999b98a83a60e65a2076abb1b5c52baa"
+                                        },
                   "favicon.ico":  {
                                       "bytes":  9538,
                                       "sha256":  "153c162b661d87f13cc51770b86ca45c20cd1632d5876a7bc9c37e031adb693c"
@@ -154,9 +162,9 @@
                                           "sha256":  "823494d320401e6f2160edc42d2dc7b1237b3f4e4402b9afae997caa95e4cdab"
                                       },
                   "index.pck":  {
-                                    "sha256":  "5fc634e59648f2910c81e23c7814b4f6581e7be8432d3eaff36348cb2f1ff160",
-                                    "gzip":  6233070,
-                                    "bytes":  6850892
+                                    "sha256":  "688b652dbf69a55523dd6df08eb279cadbbc860e57b3f5f7137f7eefc62e85b2",
+                                    "gzip":  6243257,
+                                    "bytes":  6860316
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -178,6 +186,10 @@
                                               "bytes":  21782,
                                               "sha256":  "90be02688433c8b91946fb26d735bb8b05fa924928874427266bfba5824acd6e"
                                           },
+                  "photos/solar_roof.webp":  {
+                                                 "bytes":  144000,
+                                                 "sha256":  "3700aab82f656ed8f0cab425af4b9a64c7ee24a3985acb2b997ec76f53063df1"
+                                             },
                   "og-campus-v0310.png":  {
                                               "bytes":  349905,
                                               "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
@@ -191,7 +203,7 @@
                                           "sha256":  "174640292c4619471f588823e854222a8ebc4614344bf1a1f847afa56a5e8308"
                                       },
                   "blocks.pck":  {
-                                     "sha256":  "7ee209c3649db8d50f85be645612bac7214c27b71a5ac472fb140e885c6be3d0",
+                                     "sha256":  "bac5bbd90bbce0262fc56802faef7d258c13de918966d1ec13d5cdd23de54845",
                                      "gzip":  9446657,
                                      "bytes":  11643636
                                  },
@@ -212,10 +224,14 @@
                                              "bytes":  5358,
                                              "sha256":  "bfdb1c67a7df3a2e6edfccdb1817adcb3e216f4ceb29ab4fd0733befbba1b7b4"
                                          },
-                  "photos/solar_roof.webp":  {
-                                                 "bytes":  144000,
-                                                 "sha256":  "3700aab82f656ed8f0cab425af4b9a64c7ee24a3985acb2b997ec76f53063df1"
-                                             },
+                  "murals/fish.webp":  {
+                                           "bytes":  18152,
+                                           "sha256":  "712c863d868cd2e93c39e9a8345df4d213887685c844f813e3dc18bb391106ca"
+                                       },
+                  "photos/stairs_xuewu.webp":  {
+                                                   "bytes":  100510,
+                                                   "sha256":  "68d381cab3ef34f581b23320cbd976905af9f9ca630f13399b0d656b3b02b6dc"
+                                               },
                   "sw.js":  {
                                 "bytes":  4535,
                                 "sha256":  "d5587f28f398a9dcb339ab1edd5180cc12c9ecfdac24437dd57693dd08c008c0"
