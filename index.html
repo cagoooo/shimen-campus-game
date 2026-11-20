@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.39" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.39" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.39" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.39" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.40" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.40" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.40" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.40" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -91,12 +91,23 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 @media(max-width:520px){h1{font-size:11.2vw}.cards{grid-template-columns:1fr}.cards li{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:14px;align-items:start;padding:16px}.cards img{grid-row:1/span 3;width:84px;height:84px;margin:0}.cards .tag{justify-self:start}.actions{gap:10px}#start{flex:1 1 100%;padding:16px 20px}button.secondary{flex:1 1 100%}.when span{font-size:12px;padding:6px 10px}}
 @media(prefers-reduced-motion:reduce){.frame .night,.when .n{animation:none;opacity:0}button,.cards li{transition:none}}
 #countdown{position:fixed;inset:0;z-index:2;--dial:min(60vmin,420px);display:grid;place-content:center;justify-items:center;gap:6px;padding:24px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2f6650,transparent 70%),#193e35}.cd-dial{position:relative;width:var(--dial);height:var(--dial);display:grid;place-items:center}.cd-ring{position:absolute;inset:0;border-radius:50%;border:calc(var(--dial)*.03) solid #ffffff1f;border-top-color:#ffcf64;will-change:transform;animation:cd-spin 1.2s linear infinite}.cd-window{position:relative;width:1.4em;height:1em;font-size:calc(var(--dial)*.5);line-height:1;font-weight:800;color:#ffcf64;font-variant-numeric:tabular-nums}.cd-window span{position:absolute;inset:0;text-align:center;opacity:0;will-change:opacity,transform;animation:cd-tick 1s linear both}.cd-window .cd-last{animation-name:cd-hold}.cd-title{margin:10px 0 0;font-size:clamp(20px,5vmin,28px);font-weight:700;letter-spacing:.08em;color:#fff8e8}.cd-note{position:relative;margin:0;min-height:1.8em;font-size:clamp(14px,3.4vmin,17px)}.cd-note span{display:block;will-change:opacity;animation:cd-out .4s var(--wait) forwards}.cd-note .cd-late{position:absolute;inset:0;opacity:0;animation:cd-in .4s var(--wait) forwards}@keyframes cd-spin{to{transform:rotate(1turn)}}@keyframes cd-tick{0%{opacity:0;transform:scale(1.2)}6%{opacity:1}28%{transform:scale(1)}94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}@keyframes cd-hold{0%{opacity:0;transform:scale(1.2)}6%{opacity:1}28%,100%{opacity:1;transform:scale(1)}}@keyframes cd-out{to{opacity:0}}@keyframes cd-in{to{opacity:1}}.cd-dial video{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;opacity:0}.cd-dial.playing video{opacity:1}.cd-dial.playing .cd-ring,.cd-dial.playing .cd-window{visibility:hidden}@media(prefers-reduced-motion:reduce){.cd-ring{animation-duration:4s}}
+#selform{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:16px;background:#0c1834b8}
+#selBox{width:min(100%,460px);max-height:100%;overflow:auto;background:var(--cream);color:var(--ink);border-radius:18px;padding:22px 22px 18px;box-shadow:0 10px 0 #08122a,0 24px 40px -16px #000}
+#selBox h2{margin:0 0 6px;font-size:clamp(21px,1vw + 17px,26px);color:#27695c}
+.sel-note{margin:0 0 14px;font-size:var(--fs-sm);line-height:1.65;color:#4f6359}
+.sel-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#selBox label{display:grid;gap:5px;margin:0 0 12px;font-weight:700;font-size:var(--fs-sm)}
+#selBox input{font:inherit;font-size:20px;font-weight:400;padding:10px 12px;border:2px solid #cdbd8c;border-radius:12px;background:#fff;color:var(--ink);width:100%;min-width:0}
+#selBox input:focus{outline:3px solid var(--sky);outline-offset:1px;border-color:#7fb7c9}
+#selMsg{min-height:1.5em;margin:0 0 10px;color:#b3412a;font-size:var(--fs-sm);font-weight:700}#selMsg.ok{color:#27695c}
+.sel-actions{display:flex;gap:10px}.sel-actions button{flex:1;min-height:50px;padding:12px;box-shadow:none}
+#selSend{background:var(--amber);border-color:#e3b74f}#selSkip{background:#e9e1c6;color:var(--ink);border-color:#d6c99f}
 </style>
 </head>
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.39" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.40" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -141,18 +152,26 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.39" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.40" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.39</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.40</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
+<div id="selform" class="hidden" role="dialog" aria-modal="true" aria-labelledby="selTitle"><form id="selBox" novalidate autocomplete="off">
+<h2 id="selTitle">把性格卡交給老師</h2>
+<p class="sel-note">老師要登記平時成績，請填你的班級、座號和姓名。只有老師看得到；不想填可以按「略過」。</p>
+<div class="sel-row"><label>班級<input id="selClass" inputmode="numeric" maxlength="10" placeholder="例如 501" enterkeyhint="next"></label><label>座號<input id="selSeat" inputmode="numeric" maxlength="2" placeholder="例如 12" enterkeyhint="next"></label></div>
+<label>姓名<input id="selName" maxlength="12" placeholder="你的名字" enterkeyhint="send"></label>
+<p id="selMsg" role="status"></p>
+<div class="sel-actions"><button type="submit" id="selSend">送出給老師</button><button type="button" class="secondary" id="selSkip">略過</button></div>
+</form></div>
 <script>
 // 學校公告 (2026-11-14): the 設定 sheet of the school's GAS backend (backend/gas, docs/後端串接規劃.md). It never holds up the
 // game: a slow (8 s) or failed call leaves the card hidden. A plain GET with no extra headers, so the browser sends no preflight.
@@ -220,6 +239,56 @@ return {
 };
 })();
 </script>
+<script>
+// 交給老師 (老師 2026-11-20「學生輸入班級座號再記結果，這是我自己要輸入平時成績使用的，並不會公開」): when the 心晴任務 is done
+// the campus (scripts/sel_guide.gd hand_in) asks this form for the class, seat and name, then sends them with the card to the
+// school's sheet (backend/gas/SelResult.gs, write only). A page form, so the phone's own keyboard and Chinese input work and
+// any name shows. ?statstest and this computer (localhost) write to the test sheet. The callback gets who it was handed in
+// as, or '' when skipped.
+window.campusSelForm=(()=>{
+const url='https://script.google.com/macros/s/AKfycbw6Z0xv0UTYEzoJTl51k63RBoBRWPkzQmp6aBMxnnx4qHrbd8ZXWRPr90ygLpDUI0QIsQ/exec';
+const local=/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+const test=local||new URLSearchParams(location.search).has('statstest');
+const version=((document.querySelector('.footer-bottom .pill')||{}).textContent||'').replace(/[^0-9.]/g,'');
+const layer=document.getElementById('selform'),form=document.getElementById('selBox'),msg=document.getElementById('selMsg'),send=document.getElementById('selSend');
+const klass=document.getElementById('selClass'),seat=document.getElementById('selSeat'),name=document.getElementById('selName');
+let card=null,answer=null,id='',busy=false;
+const say=(text,ok)=>{msg.textContent=text;msg.classList.toggle('ok',!!ok)};
+const close=who=>{
+ layer.classList.add('hidden');const done=answer;answer=null;card=null;busy=false;send.disabled=false;
+ const canvas=document.getElementById('canvas');if(canvas)canvas.focus();
+ if(done)done(who);
+};
+// Keys typed here are the form's: the campus underneath must not walk or open menus.
+for(const kind of ['keydown','keyup','keypress'])form.addEventListener(kind,event=>{event.stopPropagation();if(kind==='keydown'&&event.key==='Escape'&&!busy)close('')});
+document.getElementById('selSkip').onclick=()=>{if(!busy)close('')};
+form.onsubmit=event=>{
+ event.preventDefault();
+ if(busy)return;
+ // A Chinese keyboard may type full-width digits (１２).
+ const half=text=>text.trim().replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xfee0));
+ const k=half(klass.value),s=Number(half(seat.value)),n=name.value.trim();
+ if(!k){say('請填班級，例如 501');klass.focus();return}
+ if(!Number.isInteger(s)||s<1||s>99){say('座號請填 1 到 99 的數字');seat.focus();return}
+ if(!n){say('請填姓名');name.focus();return}
+ busy=true;send.disabled=true;say('送出中…',true);
+ fetch(url,{method:'POST',body:JSON.stringify(Object.assign({action:'sel_result',klass:k,seat:s,name:n,id,version,test},card))})
+  .then(r=>r.json()).then(res=>{
+   if(res&&res.ok){close(k+' 班 '+s+' 號');return} // the name stays off the card: the game's font may lack its characters
+   busy=false;send.disabled=false;say((res&&res.message)||'沒有送成功，請再按一次「送出給老師」');
+  }).catch(()=>{busy=false;send.disabled=false;say('網路好像不穩，請再按一次「送出給老師」')});
+};
+return (json,callback)=>{
+ try{card=JSON.parse(json)}catch(error){card={}}
+ answer=callback;busy=false;send.disabled=false;say('');
+ // One code per hand-in: a retry after a lost answer is written once (backend/gas/SelResult.gs).
+ id=Math.random().toString(36).slice(2,10).padEnd(8,'0')+Math.random().toString(36).slice(2,6);
+ klass.value='';seat.value='';name.value='';
+ layer.classList.remove('hidden');
+ setTimeout(()=>klass.focus(),50);
+};
+})();
+</script>
 <script src="index.js"></script>
 <script src="campus-audio.js"></script>
 <script>
@@ -228,7 +297,7 @@ return {
 const weatherCode=new URLSearchParams(location.search).get('weather');
 if(weatherCode)window.campusWeather=JSON.stringify({weather_code:Number(weatherCode),temperature_2m:23,is_day:1});
 else fetch('https://api.open-meteo.com/v1/forecast?latitude=24.86&longitude=121.22&current=temperature_2m,weather_code,is_day&timezone=Asia%2FTaipei').then(r=>r.ok?r.json():null).then(data=>{if(data&&data.current)window.campusWeather=JSON.stringify(data.current)}).catch(()=>{});
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8653260,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8653948,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const exe=config.executable,pack=config.mainPack||exe+'.pck';
 // 方塊包: the block world's cubes are their own file (scripts/block_pack.gd). New visitors start in the block world, so
 // only a visitor whose last look was realistic skips it; if the guess is wrong the campus fetches it itself.
