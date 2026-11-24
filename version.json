@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.35.44",
-    "download_bytes":  23468703,
-    "preload_bytes":  18348721,
-    "blocks_bytes":  9446656,
+    "version":  "0.35.45",
+    "download_bytes":  23470962,
+    "preload_bytes":  18350980,
+    "blocks_bytes":  9446657,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
@@ -14,7 +14,7 @@
                                           },
                   "index.html":  {
                                      "bytes":  49952,
-                                     "sha256":  "45646c52ac2675d04d83a57e290ca1a3a1a7bdaa414a442db855641e489a0838"
+                                     "sha256":  "307363ecf5c1f63eee66c05d86408dea6656bd6eb4a07f9abd6b4b969fbc7684"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -166,9 +166,9 @@
                                           "sha256":  "823494d320401e6f2160edc42d2dc7b1237b3f4e4402b9afae997caa95e4cdab"
                                       },
                   "index.pck":  {
-                                    "sha256":  "dbf0a15e13074fee9992156314c3473761fad92a4f0839eea7c2c790d479a0af",
-                                    "gzip":  8165690,
-                                    "bytes":  8816292
+                                    "sha256":  "86b341ddf3ed641c8e3c74d2b8887fd25134198edbccfb46ec9648707cd9075d",
+                                    "gzip":  8167949,
+                                    "bytes":  8818644
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -203,12 +203,12 @@
                                                  "sha256":  "0be3b7897859444104d27b89d07d2619a78615344af6aa309d5edac0a38b2e5c"
                                              },
                   "shaders.json":  {
-                                       "bytes":  1401650,
-                                       "sha256":  "dc73f0976fe27d38c717e18278275b2d706715d4e12a48c7d3a34cf2830ed4a8"
+                                       "bytes":  1410268,
+                                       "sha256":  "468616275e915c6e61e5ba5965a5e5121eb25c8013d69ee7a2c7f1467442ab41"
                                    },
                   "blocks.pck":  {
-                                     "sha256":  "fa413aa7579c62629b5a2214dd537992dd795e6c8d915b39f5695d06b634ff4a",
-                                     "gzip":  9446656,
+                                     "sha256":  "1d8988ca3dea43ec686347d1b0c12926a83f04627ebe3f1c961a9ac8adf339d7",
+                                     "gzip":  9446657,
                                      "bytes":  11643636
                                  },
                   "index.js":  {
