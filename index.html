@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.45" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.45" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.45" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.45" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.46" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.46" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.46" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.46" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -84,7 +84,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 .footer-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}.footer-points li{display:flex;gap:10px;align-items:flex-start;font-size:var(--fs-sm);line-height:1.6;color:#c9dccf}.footer-points b{display:block;color:var(--cream)}.fp-icon{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:#ffffff12;font-size:18px}
 .footer-bottom{width:min(100%,1600px);margin:0 auto;padding:14px clamp(16px,4vw,56px) max(22px,env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #ffffff1a;font-size:var(--fs-sm);color:#c9dccf}
 .site-credit{margin:0}.site-credit__heart{display:inline-block;margin:0 2px}.site-credit__author{color:#ffe7a3;text-decoration:none;border-bottom:1px dotted currentColor;padding-bottom:1px}.site-credit__author:hover{color:var(--amber)}
-#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}
+#lost{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:20px;background:#0e2b25e6}.lost-box{max-width:520px;padding:22px 24px;border-radius:16px;background:#fff8e6;color:#22382f;font-size:18px;line-height:1.7;text-align:center;box-shadow:0 12px 40px #0008}.lost-box button{margin-top:14px;min-height:48px;padding:10px 22px;border:0;border-radius:12px;background:#1f7a5c;color:#fff;font-size:18px;font-weight:700}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}
 @media(max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards li:nth-child(even){transform:none}}
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0;gap:28px}.shot{padding:0 0 10% 4%;max-width:720px}.footer-inner{grid-template-columns:1fr}#landing{background:linear-gradient(#0c1834cc,#0c1834ee),url(landing-bg.webp) center bottom/cover no-repeat,var(--night)}}
 @media(max-width:640px){.howto{grid-template-columns:1fr}.footer-points{grid-template-columns:1fr}.topbar .pill{display:none}.brand b{font-size:16px}.sticker{font-size:13px;padding:8px 12px}.footer-bottom{flex-direction:column;text-align:center}}
@@ -107,7 +107,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.45" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.46" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -152,18 +152,19 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.45" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.46" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.45</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.46</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
+<div id="lost" class="hidden" role="alert"><div class="lost-box"><p id="lostText"></p><button id="lostReload" class="hidden">重新載入</button></div></div>
 <div id="selform" class="hidden" role="dialog" aria-modal="true" aria-labelledby="selTitle"><form id="selBox" novalidate autocomplete="off">
 <h2 id="selTitle">把性格卡交給老師</h2>
 <p class="sel-note">老師要登記平時成績，請填你的班級、座號和姓名。只有老師看得到；不想填可以按「略過」。</p>
@@ -308,7 +309,33 @@ else{
   try{localStorage.setItem('campus-weather',JSON.stringify({at:Date.now(),text:window.campusWeather}))}catch(error){}
  }).catch(()=>{});
 }
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8818644,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+// 掉畫面 (老師 2026-11-24, a school iPad: an English box "WebGL context lost, please reload the page" on entering the campus):
+// the browser took the 3D picture back, on a tablet nearly always because its graphics memory ran out. Three things:
+// - iPhones and iPads never open the extra 3D canvases the shader warm-up below uses (it was written for Windows PCs, where
+//   compiling is slow, and had never run on a real iPad), and an iPad draws at no more than 1.5 pixels to the point;
+// - if the picture is lost all the same, the page says so in Chinese and loads again by itself in 省資源模式 (safe: one pixel to
+//   the point, no warm-up), remembered on this device for a week (localStorage 'campus-safe'); ?safe tries it;
+// - lost again in that mode: a message with what to do and a button, no more reloading by itself.
+const apple=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const tablet=apple&&Math.min(screen.width,screen.height)>=600;
+let safe=new URLSearchParams(location.search).has('safe');
+try{const kept=Number(localStorage.getItem('campus-safe')||0);if(kept&&Date.now()-kept<7*86400000)safe=true}catch(error){}
+const sharpest=safe?1:tablet?1.5:0; // 0: as the screen is
+if(sharpest&&(window.devicePixelRatio||1)>sharpest){try{Object.defineProperty(window,'devicePixelRatio',{get:()=>sharpest,configurable:true})}catch(error){}}
+const plainAlert=window.alert;
+window.alert=text=>{if(/WebGL context lost/i.test(String(text)))return;plainAlert.call(window,text)}; // the engine's own box; the page answers below
+document.getElementById('canvas').addEventListener('webglcontextlost',event=>{
+ event.preventDefault();event.stopImmediatePropagation();
+ let again=false;
+ try{again=sessionStorage.getItem('campus-lost')==='1';sessionStorage.setItem('campus-lost','1')}catch(error){}
+ try{localStorage.setItem('campus-safe',String(Date.now()))}catch(error){}
+ const text=document.getElementById('lostText'),button=document.getElementById('lostReload');
+ document.getElementById('lost').classList.remove('hidden');
+ if(!again&&!safe){text.textContent='這台裝置的 3D 畫面記憶體不夠用，正在改用「省資源模式」重新載入…';setTimeout(()=>location.reload(),1800)}
+ else{text.textContent='3D 畫面又中斷了。請先關掉其他分頁和 App，再按「重新載入」；如果還是不行，請改用電腦或較新的平板。';button.classList.remove('hidden')}
+},true);
+document.getElementById('lostReload').onclick=()=>location.reload();
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8820100,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const exe=config.executable,pack=config.mainPack||exe+'.pck';
 // 方塊包: the block world's cubes are their own file (scripts/block_pack.gd). New visitors start in the block world, so
 // only a visitor whose last look was realistic skips it; if the guess is wrong the campus fetches it itself.
@@ -382,6 +409,7 @@ const warmSet=(list,indices)=>new Promise(resolve=>{
 const firstLook=()=>wantBlocks?'block':'real';
 const warmShaders=()=>{
  if(warmed)return warmed;
+ if(apple||safe){warmed=Promise.resolve();return warmed} // no second 3D canvas on an iPhone or iPad, or in 省資源模式
  warmed=fetch('shaders.json'+(release?'?v='+release:'')).then(r=>r.ok?r.json():null).then(list=>{
   if(!list||!list.programs||!list.looks)return;
   shaderList=list;
@@ -390,7 +418,8 @@ const warmShaders=()=>{
  return warmed;
 };
 const warmOtherLook=()=>{
- if(warmedRest||!shaderList)return;
+ // Not on phones and tablets: a third 3D canvas compiling while the campus runs, for a look most never switch to.
+ if(warmedRest||!shaderList||matchMedia('(pointer: coarse)').matches)return;
  const first=new Set(shaderList.looks[firstLook()]||[]);
  warmedRest=warmSet(shaderList,shaderList.programs.map((_,index)=>index).filter(index=>!first.has(index))).catch(()=>{});
 };
