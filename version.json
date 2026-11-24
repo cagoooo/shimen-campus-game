@@ -1,7 +1,7 @@
 ﻿{
-    "version":  "0.35.48",
-    "download_bytes":  24024346,
-    "preload_bytes":  18904364,
+    "version":  "0.35.49",
+    "download_bytes":  24024825,
+    "preload_bytes":  18904843,
     "blocks_bytes":  9446657,
     "files":  {
                   "photos/gate.webp":  {
@@ -9,12 +9,12 @@
                                            "sha256":  "e861c22539ffa803322dfc85aab1e2b286c47e10580ee5bc5ec009645b71b9c1"
                                        },
                   "landing-title.woff2":  {
-                                              "bytes":  18584,
-                                              "sha256":  "bbec86d82806ae2d16efb2ff48f215b214c2ec120f05ca41714add9aedcbf281"
+                                              "bytes":  22628,
+                                              "sha256":  "f487560572c6cf47ece830eda4600491f211df8523443bf8c54fa45ff30d9aa1"
                                           },
                   "index.html":  {
-                                     "bytes":  53406,
-                                     "sha256":  "1bddda3f983242689fad0f54e523fc32c0371b9310a2873d9c49989813327c8b"
+                                     "bytes":  54182,
+                                     "sha256":  "c9daf3c310eff3040fcf5c8653956c2502412f9e34ccf535e4a7911ca52a684f"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -166,9 +166,9 @@
                                           "sha256":  "823494d320401e6f2160edc42d2dc7b1237b3f4e4402b9afae997caa95e4cdab"
                                       },
                   "index.pck":  {
-                                    "sha256":  "39484c0e9756eb6fa03f18b08c2e362a78350bb12a4b23a3fd25bc0bf3397c08",
-                                    "gzip":  8721333,
-                                    "bytes":  10625780
+                                    "sha256":  "c8907e0e9c2fec4b6f6042f0e23afc0fd273a59a927afd048b5d585f84b4b408",
+                                    "gzip":  8721812,
+                                    "bytes":  10625812
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -198,16 +198,20 @@
                                               "bytes":  349905,
                                               "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
                                           },
+                  "murals/fish.webp":  {
+                                           "bytes":  18152,
+                                           "sha256":  "712c863d868cd2e93c39e9a8345df4d213887685c844f813e3dc18bb391106ca"
+                                       },
                   "photos/sky_side_a.webp":  {
                                                  "bytes":  188258,
                                                  "sha256":  "0be3b7897859444104d27b89d07d2619a78615344af6aa309d5edac0a38b2e5c"
                                              },
                   "shaders.json":  {
                                        "bytes":  1410253,
-                                       "sha256":  "68e4e76eb2aeb3a0aef5081d8991940d2a2f06a011938f9ca6f5ad4144e39a4a"
+                                       "sha256":  "df3c1f69234a20bda87153676d4c72fd0518b8fb82e5d341b1032075f3f6cf66"
                                    },
                   "blocks.pck":  {
-                                     "sha256":  "bc4787646f6c34e870b3b08a9da5c9ef6a470462e89f6f895526d25f5ebdab67",
+                                     "sha256":  "4b4b09d8820b3134003cc2d97ae86f926e311eb81b026bf22cf19e1734c514ef",
                                      "gzip":  9446657,
                                      "bytes":  11643636
                                  },
@@ -228,10 +232,10 @@
                                              "bytes":  5358,
                                              "sha256":  "bfdb1c67a7df3a2e6edfccdb1817adcb3e216f4ceb29ab4fd0733befbba1b7b4"
                                          },
-                  "murals/fish.webp":  {
-                                           "bytes":  18152,
-                                           "sha256":  "712c863d868cd2e93c39e9a8345df4d213887685c844f813e3dc18bb391106ca"
-                                       },
+                  "landing-quake.webp":  {
+                                             "bytes":  7240,
+                                             "sha256":  "b93be86ce79d7850fc91f436ea2cdb3aecddc6e89da76dabd1d51fdd11c95cab"
+                                         },
                   "photos/stairs_xuewu.webp":  {
                                                    "bytes":  100510,
                                                    "sha256":  "68d381cab3ef34f581b23320cbd976905af9f9ca630f13399b0d656b3b02b6dc"
