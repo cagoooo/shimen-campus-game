@@ -16,7 +16,7 @@
     create(key) {
       if (!sources[key]) throw new Error('Unknown campus audio channel');
       const element = new Audio(new URL('audio/' + sources[key], document.baseURI).href);
-      element.preload = 'auto';
+      element.preload = window.campusLite ? 'none' : 'auto'; // 省資源模式 (web/shell.html): loads when first played
       element.loop = key !== 'bell';
       element.volume = 0;
       element.dataset.campusAudio = key;
