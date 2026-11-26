@@ -12,10 +12,10 @@
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.52" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.52" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.52" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.52" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.53" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.53" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.53" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.53" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -84,7 +84,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 .footer-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}.footer-points li{display:flex;gap:10px;align-items:flex-start;font-size:var(--fs-sm);line-height:1.6;color:#c9dccf}.footer-points b{display:block;color:var(--cream)}.fp-icon{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:#ffffff12;font-size:18px}
 .footer-bottom{width:min(100%,1600px);margin:0 auto;padding:14px clamp(16px,4vw,56px) max(22px,env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #ffffff1a;font-size:var(--fs-sm);color:#c9dccf}
 .site-credit{margin:0}.site-credit__heart{display:inline-block;margin:0 2px}.site-credit__author{color:#ffe7a3;text-decoration:none;border-bottom:1px dotted currentColor;padding-bottom:1px}.site-credit__author:hover{color:var(--amber)}
-#lost{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:20px;background:#0e2b25e6}.lost-box{max-width:520px;padding:22px 24px;border-radius:16px;background:#fff8e6;color:#22382f;font-size:18px;line-height:1.7;text-align:center;box-shadow:0 12px 40px #0008}.lost-box button{margin-top:14px;min-height:48px;padding:10px 22px;border:0;border-radius:12px;background:#1f7a5c;color:#fff;font-size:18px;font-weight:700}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}
+#lost{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:20px;background:#0e2b25e6}.lost-box{max-width:520px;padding:22px 24px;border-radius:16px;background:#fff8e6;color:#22382f;font-size:18px;line-height:1.7;text-align:center;box-shadow:0 12px 40px #0008}.lost-why{margin:8px 0 0;color:#6b766f;font-size:13px;line-height:1.5}.lost-box button{margin-top:14px;min-height:48px;padding:10px 22px;border:0;border-radius:12px;background:#1f7a5c;color:#fff;font-size:18px;font-weight:700}#help{position:fixed;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top));z-index:3}#help button{min-height:40px;padding:8px 12px;background:#193e35dd;color:white;font-size:13px}.hidden{display:none!important}
 @media(max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards li:nth-child(even){transform:none}.cards li:last-child:nth-child(odd){grid-column:1/-1}}
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0;gap:28px}.shot{padding:0 0 10% 4%;max-width:720px}.footer-inner{grid-template-columns:1fr}#landing{background:linear-gradient(#0c1834cc,#0c1834ee),url(landing-bg.webp) center bottom/cover no-repeat,var(--night)}}
 @media(max-width:640px){.howto{grid-template-columns:1fr}.footer-points{grid-template-columns:1fr}.topbar .pill{display:none}.brand b{font-size:16px}.sticker{font-size:13px;padding:8px 12px}.footer-bottom{flex-direction:column;text-align:center}}
@@ -107,7 +107,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.52" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.53" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -155,19 +155,19 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.52" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.53" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號；心晴任務的「交給老師」是學生自己填寫班級座號，只送到老師的成績表</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.52</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.53</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
 <div id="help" class="hidden"><button id="restart">重新載入</button></div>
-<div id="lost" class="hidden" role="alert"><div class="lost-box"><p id="lostText"></p><button id="lostReload" class="hidden">重新載入</button></div></div>
+<div id="lost" class="hidden" role="alert"><div class="lost-box"><p id="lostText"></p><p id="lostWhy" class="lost-why"></p><button id="lostReload" class="hidden">重新載入</button></div></div>
 <div id="selform" class="hidden" role="dialog" aria-modal="true" aria-labelledby="selTitle"><form id="selBox" novalidate autocomplete="off">
 <h2 id="selTitle">把性格卡交給老師</h2>
 <p class="sel-note">老師要登記平時成績，請填你的班級、座號和姓名。只有老師看得到；不想填可以按「略過」。</p>
@@ -333,6 +333,15 @@ const tablet=apple&&Math.min(screen.width,screen.height)>=600;
 // - each loss goes one level up by itself (to 2 at most), remembered on this device for a week (localStorage 'campus-lite');
 // - lost at level 2: a message with what to do and a button. ?lite=1 / ?lite=2 (or ?safe, level 1) tries a level.
 const smallTablet=tablet&&Math.max(screen.width,screen.height)<=1080;
+// 診斷 (2026-11-26, the same iPad lost the picture again at the lightest level): what the page was doing when it was lost, shown
+// small under the message so a photo of the screen says it (nothing is sent anywhere).
+let stage='開頁',stageAt=performance.now();
+const mark=name=>{stage=name;stageAt=performance.now()};
+const diagnosis=()=>{
+ const os=(navigator.userAgent.match(/OS (\d+)[_.](\d+)/)||[]).slice(1).join('.');
+ let heap=0;try{heap=engine&&engine.rtenv&&engine.rtenv.HEAP8?Math.round(engine.rtenv.HEAP8.length/1048576):0}catch(error){}
+ return '診斷：'+release+'｜省資源 '+lite+'｜'+stage+' '+Math.round((performance.now()-stageAt)/1000)+' 秒｜開頁 '+Math.round(performance.now()/1000)+' 秒｜'+(os?'iPadOS '+os+'｜':'')+'螢幕 '+screen.width+'×'+screen.height+'｜引擎 '+heap+' MB';
+};
 const asked=new URLSearchParams(location.search);
 let lite=asked.has('lite')?Math.min(2,Math.max(1,Number(asked.get('lite'))||1)):(asked.has('safe')?1:0);
 try{const kept=JSON.parse(localStorage.getItem('campus-lite')||'null');if(kept&&Date.now()-kept.at<7*86400000)lite=Math.max(lite,Math.min(2,Number(kept.level)||0))}catch(error){}
@@ -345,17 +354,20 @@ const plainAlert=window.alert;
 window.alert=text=>{if(/WebGL context lost/i.test(String(text)))return;plainAlert.call(window,text)}; // the engine's own box; the page answers below
 document.getElementById('canvas').addEventListener('webglcontextlost',event=>{
  event.preventDefault();event.stopImmediatePropagation();
+ // Reloads by itself up a level until the lightest; tries only stops a loop (it once counted losses from older versions in
+ // the same tab, and gave up before trying level 2).
  let tries=0;
- try{tries=Number(sessionStorage.getItem('campus-lost')||0);sessionStorage.setItem('campus-lost',String(tries+1))}catch(error){}
+ try{tries=Number(sessionStorage.getItem('campus-lost-'+lite)||0);sessionStorage.setItem('campus-lost-'+lite,String(tries+1))}catch(error){}
  const next=Math.min(2,lite+1);
  try{localStorage.setItem('campus-lite',JSON.stringify({level:next,at:Date.now()}))}catch(error){}
  const text=document.getElementById('lostText'),button=document.getElementById('lostReload');
+ document.getElementById('lostWhy').textContent=diagnosis();
  document.getElementById('lost').classList.remove('hidden');
  if(next>lite&&tries<2){text.textContent=lite?'3D 畫面又中斷了，正在改用「最省資源模式」（畫面比較簡單、看得比較近）重新載入…':'這台裝置的 3D 畫面記憶體不夠用，正在改用「省資源模式」重新載入…';setTimeout(()=>location.reload(),1800)}
  else{text.textContent='3D 畫面又中斷了，這台平板的記憶體可能不夠用。請先關掉 Safari 其他分頁和背景 App，再按「重新載入」；如果還是不行，請改用電腦或較新的平板。';button.classList.remove('hidden')}
 },true);
 document.getElementById('lostReload').onclick=()=>location.reload();
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":10836212,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":10836228,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const exe=config.executable,pack=config.mainPack||exe+'.pck';
 // 方塊包: the block world's cubes are their own file (scripts/block_pack.gd). New visitors start in the block world, so
 // only a visitor whose last look was realistic skips it; if the guess is wrong the campus fetches it itself.
@@ -446,6 +458,7 @@ const warmOtherLook=()=>{
 // Same steps as Engine.startGame, split so the download can begin while visitors read this page.
 const beginLoad=()=>{
  if(loading)return loading;
+ mark('下載');
  warmShaders();
  t0=changed=performance.now();progress.max=1;progress.value=0;
  stall=setInterval(()=>{if(!loaded&&!slow&&performance.now()-changed>20000){slow=true;say(status.textContent+'｜網路有點慢，可以稍候或改用 Wi-Fi')}},5000);
@@ -485,12 +498,13 @@ if(inApp){
 // lifts the page. A tap during the pause is kept and handled right after it.
 let booting=null,drawn=false;
 window.campusBehind=true; // the campus draws nothing more once ready, until this page lifts (scripts/campus.gd _report_drawn)
-window.campusDrawn=()=>{drawn=true;warmOtherLook();if(launched&&ready)reveal();else if(!launched)say('校園準備好了，按「開始校園冒險」馬上進入！')};
+window.campusDrawn=()=>{drawn=true;mark('首頁後面已畫好');warmOtherLook();if(launched&&ready)reveal();else if(!launched)say('校園準備好了，按「開始校園冒險」馬上進入！')};
 const boot=()=>{
  if(booting)return booting;
+ mark('準備 3D');
  const touch=matchMedia('(pointer: coarse)').matches||navigator.maxTouchPoints>0;
  const user=(touch?['--touch-ui']:[]).concat(forceReal?['--real']:[]).concat(lite?['--lite='+lite]:[]);
- booting=warmShaders().then(()=>engine.start({args:['--main-pack',pack].concat(user.length?['--'].concat(user):[]),onExit:()=>location.reload()})).then(()=>{started=true});
+ booting=warmShaders().then(()=>engine.start({args:['--main-pack',pack].concat(user.length?['--'].concat(user):[]),onExit:()=>location.reload()})).then(()=>{started=true;mark('啟動後')});
  return booting;
 };
 const preBoot=()=>{
@@ -531,7 +545,7 @@ const videoRunning=()=>new Promise(resolve=>{
 });
 const reveal=()=>{
  if(landing.classList.contains('hidden'))return;
- landing.classList.add('hidden');window.campusBehind=false;document.getElementById('canvas').focus();
+ landing.classList.add('hidden');window.campusBehind=false;mark('校園裡');document.getElementById('canvas').focus();
  window.campusStats.begin(); // a visit counts when the campus is shown, not when it got ready behind this page
  if(waitStart)requestAnimationFrame(()=>{try{localStorage.setItem('campus-wait-seconds',((performance.now()-waitStart)/1000).toFixed(1))}catch(error){}});
 };
