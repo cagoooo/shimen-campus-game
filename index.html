@@ -9,13 +9,14 @@
 </script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#193e35">
+<meta name="whats-new" content="0.35.63｜新增「有新版本」通知：遊戲開著時發現新版會提醒，更新後也會顯示這一版改了什麼">
 <meta name="description" content="走進方塊版石門國小，跟著心晴任務學習和同學好好相處、認識自己的性格，還能校園尋寶、導航到每間教室、自己蓋方塊。支援電腦及手機橫直式操作。">
 <title>石門・心晴校園｜阿凱老師</title>
 <link rel="canonical" href="https://cagoooo.github.io/shimen-campus-game/">
-<link rel="icon" href="favicon.ico?v=0.35.62" sizes="any">
-<link rel="icon" href="favicon.svg?v=0.35.62" type="image/svg+xml">
-<link rel="icon" href="favicon-32.png?v=0.35.62" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.62" sizes="180x180">
+<link rel="icon" href="favicon.ico?v=0.35.63" sizes="any">
+<link rel="icon" href="favicon.svg?v=0.35.63" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=0.35.63" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=0.35.63" sizes="180x180">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="石門・心晴校園">
@@ -102,12 +103,22 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 #selMsg{min-height:1.5em;margin:0 0 10px;color:#b3412a;font-size:var(--fs-sm);font-weight:700}#selMsg.ok{color:#27695c}
 .sel-actions{display:flex;gap:10px}.sel-actions button{flex:1;min-height:50px;padding:12px;box-shadow:none}
 #selSend{background:var(--amber);border-color:#e3b74f}#selSkip{background:#e9e1c6;color:var(--ink);border-color:#d6c99f}
+/* 有新版本通知・已更新提示 (2026-11-28) */
+.upd{position:fixed;left:50%;top:calc(10px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:60;width:min(560px,calc(100% - 24px));background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:16px;box-shadow:0 6px 0 var(--ink),0 18px 40px -12px #000a;padding:12px 14px;display:flex;align-items:center;gap:12px;font-size:var(--fs-md);line-height:1.4}
+.upd.hidden{display:none}
+.upd .upd-icon{flex:none;width:40px;height:40px;border-radius:10px;background:var(--amber);display:grid;place-items:center;font-size:22px;box-shadow:inset 0 -3px 0 #0002}
+.upd .upd-text{flex:1;min-width:0}.upd b{display:block;font-size:var(--fs-md)}.upd small{display:block;font-size:var(--fs-sm);color:#4a5f57}
+.upd button{min-height:44px;padding:8px 14px;border-radius:12px;border:2px solid var(--ink);font-size:var(--fs-sm);box-shadow:0 3px 0 var(--ink);white-space:nowrap}
+.upd button:active{transform:translateY(3px);box-shadow:none}
+.upd .upd-go{background:var(--coral);color:#fff;font-weight:800}.upd .upd-later{background:#fff}
+@media (max-width:520px){.upd{flex-wrap:wrap}.upd .upd-text{flex-basis:calc(100% - 52px)}.upd .upd-btns{display:flex;gap:8px;width:100%}.upd .upd-btns button{flex:1}}
+.ver-line{margin:6px 0 0;font-size:var(--fs-sm);color:#cfe0d8}.ver-line.new{color:var(--amber)}
 </style>
 </head>
 <body>
 <canvas id="canvas" tabindex="0" aria-label="石門校園 3D 遊戲">您的瀏覽器不支援遊戲畫布，請使用新版 Chrome、Edge 或 Safari。</canvas>
 <main id="landing"><div class="stage">
-<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.62" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
+<header class="topbar"><div class="brand"><img src="favicon.svg?v=0.35.63" alt="" width="40" height="40"><div><b>石門・心晴校園</b>石門國小資訊組 3D 校園遊戲</div></div><span class="pill">電腦・手機・平板都能玩</span></header>
 <section class="hero">
 <div class="copy">
 <div class="eyebrow">桃園市龍潭區石門國民小學</div>
@@ -117,7 +128,7 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 <div id="notice" class="notice hidden" role="status" aria-live="polite"><b>📢 學校公告</b><p id="notice-text"></p></div>
 <div id="inapp" class="inapp hidden" role="note"><b>建議改用瀏覽器開啟</b><span>你正在 App 內建瀏覽器裡開啟。3D 校園用 Safari 或 Chrome 會更順，挑戰紀錄也比較不會遺失。請點右上角「⋯」選「用瀏覽器開啟」。</span><div class="inapp-actions"><button id="chrome" class="hidden">用 Chrome 開啟</button><button class="secondary" id="copy">複製連結</button></div></div>
 <div class="actions"><button id="start">開始校園冒險</button><button class="secondary" id="fullscreen">全螢幕</button></div>
-<div class="loadbox"><progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p></div>
+<div class="loadbox"><progress id="progress" class="hidden"></progress><p id="status" role="status">第一次進入需要下載遊戲，建議使用 Wi-Fi。</p><p id="ver-line" class="ver-line" aria-live="polite"></p></div>
 </div>
 <figure class="shot" aria-label="遊戲畫面：方塊版石門校園的白天與夜晚">
 <div class="frame"><img src="landing-day.webp" alt="方塊版石門校園的白天俯瞰" width="1280" height="731" fetchpriority="high"><img class="night" src="landing-night.webp" alt="" width="1280" height="731"><div class="when" aria-hidden="true"><span>☀️ 白天的校園</span><span class="n">🌙 夜晚・教室亮燈</span></div></div>
@@ -155,14 +166,14 @@ kbd{display:inline-block;margin-right:4px;min-width:2em;padding:3px 8px;border-r
 </div>
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-brand"><img src="favicon.svg?v=0.35.62" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
+<div class="footer-brand"><img src="favicon.svg?v=0.35.63" alt="" width="48" height="48"><div><strong>石門・心晴校園</strong><span>走進石門，認識自己</span></div></div>
 <ul class="footer-points">
 <li><span class="fp-icon" aria-hidden="true">💾</span><div><b>進度存在這台裝置</b>挑戰與任務保存在目前瀏覽器，清除網站資料後會重設；學校只統計匿名的使用人次與去過的景點，不記錄姓名或帳號；心晴任務的「交給老師」是學生自己填寫班級座號，只送到老師的成績表</div></li>
 <li><span class="fp-icon" aria-hidden="true">⛅</span><div><b>龍潭即時天氣</b>資料來源：<a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a></div></li>
 <li><span class="fp-icon" aria-hidden="true">⚡</span><div><b>第二次開更快</b>遊戲檔案會存在這台裝置，更新時只下載改過的部分</div></li>
 </ul>
 </div>
-<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.62</span></div>
+<div class="footer-bottom"><p class="site-credit">Made with <span class="site-credit__heart" aria-label="愛心">❤️</span> by <a class="site-credit__author" href="https://cagoooo.github.io/Akai/" target="_blank" rel="noopener noreferrer">阿凱老師</a>・桃園市龍潭區石門國民小學</p><span class="pill">校園探索原型 0.35.63</span></div>
 </footer>
 <div id="countdown" class="hidden" aria-hidden="true"><div class="cd-dial" id="cdDial"><i class="cd-ring"></i><div class="cd-window" id="cdDigits"></div><video id="cdVideo" src="countdown-v0315.mp4" muted playsinline preload="none"></video></div><p class="cd-title">校園準備中</p><p class="cd-note"><span>第一次約需 10～20 秒，之後再開會快很多</span><span class="cd-late">快好了，再等一下…</span></p></div>
 </main>
@@ -581,6 +592,70 @@ start.onclick=async()=>{
  }catch(error){clearInterval(stall);countdown.classList.add('hidden');console.error(error);say('遊戲載入失敗，請重新整理後再試。'+String(error.message||error));document.getElementById('help').classList.remove('hidden');}
 };
 document.getElementById('canvas').addEventListener('contextmenu',event=>event.preventDefault());
+</script>
+<div id="upd-bar" class="upd hidden" role="alert"><div class="upd-icon">🎉</div><div class="upd-text"><b id="upd-title"></b><small id="upd-note"></small></div><div class="upd-btns"><button class="upd-go" id="upd-go">立即更新</button><button class="upd-later" id="upd-later">稍後</button></div></div>
+<div id="upd-done" class="upd hidden" role="status"><div class="upd-icon">✅</div><div class="upd-text"><b id="upd-done-title"></b><small id="upd-done-note"></small></div><div class="upd-btns"><button class="upd-later" id="upd-done-ok">知道了</button></div></div>
+<script>
+// 有新版本通知 (2026-11-28 老師「都沒有收到 SW 更新通知，怎麼會知道是不是最新的版本」). The page itself always comes from the
+// network (sw.js keeps only the big files), but a campus left open through a lesson, or a page GitHub Pages still serves from its
+// 10-minute HTML cache, stays on the old release with nothing to say so. Now:
+//  - while open, version.json is asked every 10 minutes and on coming back to the tab; only a release newer than this page
+//    (numbers compared part by part) shows the bar; 立即更新 reloads with ?v=<new> so the HTML cache is passed by;
+//  - after updating, or pressing 稍後, that release is not offered again in this tab session (no update loop if a cache
+//    still hands out the old page for a moment);
+//  - the first visit after a release says 已更新到最新版 with the whats-new line (meta whats-new, checked by release_web.ps1);
+//  - the landing page says which version this is and whether it is the newest.
+// ?upddemo=0.99.0 shows the bar as if that release were online; ?updateddemo shows the 已更新 note.
+(()=>{
+const page=(document.querySelector('link[rel="icon"]').getAttribute('href').split('v=')[1]||'').trim();
+const news=((document.querySelector('meta[name="whats-new"]')||{}).content||'');
+const params=new URLSearchParams(location.search);
+const parts=v=>String(v).split('.').map(n=>parseInt(n,10)||0);
+const newer=(a,b)=>{const x=parts(a),y=parts(b);for(let i=0;i<Math.max(x.length,y.length);i++){const d=(x[i]||0)-(y[i]||0);if(d)return d>0}return false};
+const get=(key,session)=>{try{return (session?sessionStorage:localStorage).getItem(key)}catch(error){return null}};
+const put=(key,value,session)=>{try{(session?sessionStorage:localStorage).setItem(key,value)}catch(error){}};
+const $=id=>document.getElementById(id);
+const line=$('ver-line');
+// The ?v= the update button added has done its work: take it off the address so a shared link stays clean.
+if(params.has('v')){const url=new URL(location.href);url.searchParams.delete('v');history.replaceState(history.state,'',url.pathname+url.search+url.hash)}
+// 已更新: this browser last saw an older release.
+const seen=get('campus-version');
+if(page&&((seen&&newer(page,seen))||params.has('updateddemo'))){
+ $('upd-done-title').textContent='已更新到最新版 '+page;
+ $('upd-done-note').textContent=news.startsWith(page)?news.replace(/^[\d.]+[｜|]\s*/,''):'';
+ $('upd-done').classList.remove('hidden');
+ const hide=()=>$('upd-done').classList.add('hidden');
+ $('upd-done-ok').onclick=hide;setTimeout(hide,9000);
+}
+if(page&&(!seen||newer(page,seen)))put('campus-version',page);
+let offered='',lastAsk=0;
+const offer=online=>{
+ if(offered===online)return;
+ offered=online;
+ $('upd-title').textContent='有新版本 '+online+' 可以更新了！';
+ $('upd-note').textContent='按「立即更新」會重新載入遊戲，任務、徽章和觀察紀錄都會保留。';
+ $('upd-done').classList.add('hidden'); // one card at a time
+ $('upd-bar').classList.remove('hidden');
+ $('upd-go').onclick=()=>{put('campus-update-ack',online,true);const url=new URL(location.href);url.searchParams.set('v',online);url.searchParams.delete('upddemo');location.replace(url.href)};
+ $('upd-later').onclick=()=>{put('campus-update-later',online,true);$('upd-bar').classList.add('hidden')};
+};
+const ask=async()=>{
+ if(!page||document.hidden)return;
+ lastAsk=Date.now();
+ let online=params.get('upddemo')||'';
+ if(!online){try{const info=await fetch('version.json',{cache:'no-store'}).then(r=>r.ok?r.json():null);online=String((info&&info.version)||'')}catch(error){return}}
+ if(!online)return;
+ if(!newer(online,page)){if(line)line.textContent='目前版本 '+page+'・✓ 已是最新版';return}
+ if(line){line.textContent='目前版本 '+page+'・有新版本 '+online;line.classList.add('new')}
+ if(get('campus-update-ack',true)===online||get('campus-update-later',true)===online)return; // pressed already this session
+ offer(online);
+};
+if(line&&page)line.textContent='目前版本 '+page;
+setTimeout(ask,2500);
+setInterval(ask,10*60*1000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&Date.now()-lastAsk>2*60*1000)ask()});
+window.campusUpdate={newer,ask};
+})();
 </script>
 </body></html>
 
