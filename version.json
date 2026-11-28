@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.35.63",
-    "download_bytes":  24593515,
-    "preload_bytes":  19473533,
-    "blocks_bytes":  14639126,
+    "version":  "0.35.64",
+    "download_bytes":  24594776,
+    "preload_bytes":  19474794,
+    "blocks_bytes":  14639125,
     "files":  {
                   "photos/gate.webp":  {
                                            "bytes":  187366,
@@ -13,8 +13,8 @@
                                               "sha256":  "f487560572c6cf47ece830eda4600491f211df8523443bf8c54fa45ff30d9aa1"
                                           },
                   "index.html":  {
-                                     "bytes":  64557,
-                                     "sha256":  "9192df81022619731d932f0c81761c174a1f4ed595004d32f5f2473c23d2f74f"
+                                     "bytes":  64601,
+                                     "sha256":  "f9bcc205301f7a9d937a198d747180bfbe531faa9a0dced34e31764e0a92d2fa"
                                  },
                   "audio/school-song.mp3":  {
                                                 "bytes":  4077334,
@@ -28,14 +28,14 @@
                                          "bytes":  1951,
                                          "sha256":  "2310c1524bfc00a609c9fe33228ccfaf0a74dcdd94e58334d216ed297cbdc25e"
                                      },
-                  "photos/grade1_play.webp":  {
-                                                  "bytes":  165154,
-                                                  "sha256":  "b762b7331c0e7fc2d9c95913f7194c50de70dfa67ff4915ce991988a421e4b3f"
-                                              },
                   "index.audio.position.worklet.js":  {
                                                           "bytes":  2973,
                                                           "sha256":  "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
                                                       },
+                  "audio/rain-light.mp3":  {
+                                               "bytes":  408808,
+                                               "sha256":  "50c1a42b42af38d18436c3cd3282791d99e3238b3cb96e64e26a26dc0da6e5e7"
+                                           },
                   "photos/roundabout.webp":  {
                                                  "bytes":  217920,
                                                  "sha256":  "0a0552dcd5b4e99d240a9d70ffc0b9a103e8dd11ade5c684e212d62a8a43d9c4"
@@ -56,6 +56,10 @@
                                                     "bytes":  112256,
                                                     "sha256":  "a1f9f05a21ef097950ee2c223a83ec16cc8277c18959fd88f1f1b4d7c4ea1f48"
                                                 },
+                  "photos/sky_side_b.webp":  {
+                                                 "bytes":  185994,
+                                                 "sha256":  "ff28d20d819c098c2728b375fbecd10f83da939757028ed7305eb553cab4ce26"
+                                             },
                   "landing-bg.webp":  {
                                           "bytes":  26632,
                                           "sha256":  "7f26a14d57729f845fde55df4488e7dd5c14a07c2611ecfb05bc466ddc8c711c"
@@ -73,10 +77,10 @@
                                                  "bytes":  120712,
                                                  "sha256":  "a98005e36fcd24696fb414230e5d4f15b58c6f5194fa3c7bebaad20c98b9af4d"
                                              },
-                  "audio/rain.mp3":  {
-                                         "bytes":  320804,
-                                         "sha256":  "177092bd907ac9d2b4b1981e15025f3f8ebef68d4c01929c7d29e79eb5e1dfde"
-                                     },
+                  "photos/grade1_play.webp":  {
+                                                  "bytes":  165154,
+                                                  "sha256":  "b762b7331c0e7fc2d9c95913f7194c50de70dfa67ff4915ce991988a421e4b3f"
+                                              },
                   "landing-card.webp":  {
                                             "bytes":  4378,
                                             "sha256":  "80bff5020050f8af2b75bc661afdcd51f9615c41d1c176051572b9582b5ad9cf"
@@ -141,10 +145,10 @@
                                     "bytes":  21443,
                                     "sha256":  "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
                                 },
-                  "photos/sky_side_b.webp":  {
-                                                 "bytes":  185994,
-                                                 "sha256":  "ff28d20d819c098c2728b375fbecd10f83da939757028ed7305eb553cab4ce26"
-                                             },
+                  "audio/rain-mid.mp3":  {
+                                             "bytes":  678705,
+                                             "sha256":  "b6f5877f28876e977b554f8ececa33579e69aa69e17a7d1dff0a120670430cdb"
+                                         },
                   "photos/aquaponic_net.webp":  {
                                                     "bytes":  242422,
                                                     "sha256":  "62a8b1bcbc0e1b332416741fd835306a3fb98606705ec6bd4409de60330bb81c"
@@ -162,13 +166,13 @@
                                                  "sha256":  "d7fcd4f8f3ba63f9aa567e69025489e58493eaaed0264f635f96220e5456789d"
                                              },
                   "campus-audio.js":  {
-                                          "bytes":  3538,
-                                          "sha256":  "61af3caf88cb22eb07645e5623e1c21da66ca03fd3978d829b4f72158e1f49cb"
+                                          "bytes":  9991,
+                                          "sha256":  "0057541baa301e6aefb41d795d8c04a07456c46e8fcf05d47aed9caba5dc8d98"
                                       },
                   "index.pck":  {
-                                    "sha256":  "17f7199e46c530e6b389d9be18a162f24f7c9599844ed4aef3f912af939b56b3",
-                                    "gzip":  9290502,
-                                    "bytes":  11214716
+                                    "sha256":  "e05ec2da79a71cb59a40bf6c5a6d4158b3ddc8e764db6ddcfe78438e17855d05",
+                                    "gzip":  9291763,
+                                    "bytes":  11216636
                                 },
                   "apple-touch-icon.png":  {
                                                "bytes":  10854,
@@ -190,29 +194,29 @@
                                               "bytes":  21782,
                                               "sha256":  "90be02688433c8b91946fb26d735bb8b05fa924928874427266bfba5824acd6e"
                                           },
-                  "photos/solar_roof.webp":  {
-                                                 "bytes":  144000,
-                                                 "sha256":  "3700aab82f656ed8f0cab425af4b9a64c7ee24a3985acb2b997ec76f53063df1"
-                                             },
-                  "og-campus-v0310.png":  {
-                                              "bytes":  349905,
-                                              "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
-                                          },
                   "murals/fish.webp":  {
                                            "bytes":  18152,
                                            "sha256":  "712c863d868cd2e93c39e9a8345df4d213887685c844f813e3dc18bb391106ca"
                                        },
+                  "og-campus-v0310.png":  {
+                                              "bytes":  349905,
+                                              "sha256":  "93545bec522ecec8dc8a932d149eea2e00df5d74119ab2d251855951125661fe"
+                                          },
+                  "audio/rain-heavy.mp3":  {
+                                               "bytes":  485608,
+                                               "sha256":  "3293ccdf0a526eabba0d227a2c0cf20a031a4a505d91a05b659ffa9a079110cf"
+                                           },
                   "photos/sky_side_a.webp":  {
                                                  "bytes":  188258,
                                                  "sha256":  "0be3b7897859444104d27b89d07d2619a78615344af6aa309d5edac0a38b2e5c"
                                              },
                   "shaders.json":  {
-                                       "bytes":  1514774,
-                                       "sha256":  "22f1d6160dd184e1e51e9f02903a46c730628a3d5070edc0ed619a70134a95fc"
+                                       "bytes":  1514771,
+                                       "sha256":  "91475c726e565b268ff01581e43bb9fc80d414ce18c4de6b1477573523c71ea9"
                                    },
                   "blocks.pck":  {
-                                     "sha256":  "0d4fff4ca59e6dc2c6114b975533f16885fc9a38ae57621f916dad7d251bd4b7",
-                                     "gzip":  14639126,
+                                     "sha256":  "55040dca6ff5f3c8e3fd496df7130d5d42701c0704cb5651c6f62f4a8547f1a1",
+                                     "gzip":  14639125,
                                      "bytes":  16802220
                                  },
                   "index.js":  {
@@ -236,6 +240,10 @@
                                              "bytes":  7240,
                                              "sha256":  "b93be86ce79d7850fc91f436ea2cdb3aecddc6e89da76dabd1d51fdd11c95cab"
                                          },
+                  "photos/solar_roof.webp":  {
+                                                 "bytes":  144000,
+                                                 "sha256":  "3700aab82f656ed8f0cab425af4b9a64c7ee24a3985acb2b997ec76f53063df1"
+                                             },
                   "photos/stairs_xuewu.webp":  {
                                                    "bytes":  100510,
                                                    "sha256":  "68d381cab3ef34f581b23320cbd976905af9f9ca630f13399b0d656b3b02b6dc"
