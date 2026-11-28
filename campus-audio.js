@@ -54,6 +54,8 @@
           if (silent !== quiet) { quiet = silent; track.sync(); }
         },
         isPlaying() { return wanted && !element.ended; },
+        getTime() { return element.currentTime || 0; },
+        getDuration() { return Number.isFinite(element.duration) ? element.duration : 0; },
         dispose() { track.stop(); disposed = true; tracks.delete(track); element.removeAttribute('src'); element.load(); element.remove(); }
       };
       element.addEventListener('ended', () => { if (!element.loop) wanted = false; });
