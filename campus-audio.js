@@ -1,4 +1,6 @@
-/* Native media avoids starving Godot's single-threaded Web audio mixer. */
+/* Native media avoids starving Godot's single-threaded Web audio mixer.
+   iPad／iPhone Safari ignores element.volume (always full), so a channel turned down to nothing is paused instead: the birds
+   in the rain or at night, the frogs on a dry day, muting (老師 2026-11-28「下雨時竟然還會聽到鳥叫聲」). */
 (() => {
   const sources = { music: 'school-song.mp3', birds: 'birds.mp3', wind: 'wind.mp3', bell: 'bell-preview.mp3', rain: 'rain.mp3', insects: 'insects.mp3', frogs: 'frogs.mp3' };
   const tracks = new Set();
@@ -22,31 +24,35 @@
       element.dataset.campusAudio = key;
       element.hidden = true;
       document.body.appendChild(element);
-      let wanted = false, paused = false, pending = false, disposed = false;
+      let wanted = false, paused = false, pending = false, disposed = false, quiet = true;
       const track = {
         sync() {
           if (disposed) return;
-          if (!wanted || paused || document.hidden) { element.pause(); return; }
+          if (!wanted || paused || quiet || document.hidden) { element.pause(); return; }
           if (!element.paused || pending) return;
           pending = true;
           let retryAfter = false;
           element.play().then(() => {
             retryAfter = true;
             retry.hidden = true;
-            if (!wanted || paused || document.hidden || disposed) element.pause();
+            if (!wanted || paused || quiet || document.hidden || disposed) element.pause();
           }).catch(error => {
             retryAfter = error.name === 'AbortError';
             if (error.name === 'NotAllowedError') retry.hidden = false;
             else if (error.name !== 'AbortError') console.warn('Campus audio:', key, error.name);
           }).finally(() => {
             pending = false;
-            if (retryAfter && wanted && !paused && !document.hidden && element.paused) track.sync();
+            if (retryAfter && wanted && !paused && !quiet && !document.hidden && element.paused) track.sync();
           });
         },
         play() { wanted = true; if (key === 'bell') element.currentTime = 0; track.sync(); },
         stop() { wanted = false; element.pause(); element.currentTime = 0; },
         setPaused(value) { paused = value; track.sync(); },
-        setVolume(value) { element.volume = Math.min(1, Math.max(0, value)); },
+        setVolume(value) {
+          element.volume = Math.min(1, Math.max(0, value));
+          const silent = !(value > 0.001);
+          if (silent !== quiet) { quiet = silent; track.sync(); }
+        },
         isPlaying() { return wanted && !element.ended; },
         dispose() { track.stop(); disposed = true; tracks.delete(track); element.removeAttribute('src'); element.load(); element.remove(); }
       };
